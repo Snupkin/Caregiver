@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		227224CC238F109800A7B254 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224CB238F109800A7B254 /* AppDelegate.m */; };
+		227224CF238F109800A7B254 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224CE238F109800A7B254 /* ViewController.m */; };
+		227224D2238F109800A7B254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227224D0238F109800A7B254 /* Main.storyboard */; };
+		227224D5238F109800A7B254 /* CareGiver_1_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227224D3238F109800A7B254 /* CareGiver_1_0.xcdatamodeld */; };
+		227224D7238F109E00A7B254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227224D6238F109E00A7B254 /* Assets.xcassets */; };
+		227224DA238F109E00A7B254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227224D8238F109E00A7B254 /* LaunchScreen.storyboard */; };
+		227224DD238F109E00A7B254 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224DC238F109E00A7B254 /* main.m */; };
+		227224E7238F109E00A7B254 /* CareGiver_1_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224E6238F109E00A7B254 /* CareGiver_1_0Tests.m */; };
+		227224F2238F109E00A7B254 /* CareGiver_1_0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224F1238F109E00A7B254 /* CareGiver_1_0UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		227224E3238F109E00A7B254 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 227224BF238F109800A7B254 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 227224C6238F109800A7B254;
+			remoteInfo = "CareGiver 1.0";
+		};
+		227224EE238F109E00A7B254 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 227224BF238F109800A7B254 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 227224C6238F109800A7B254;
+			remoteInfo = "CareGiver 1.0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		227224C7238F109800A7B254 /* CareGiver 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CareGiver 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		227224CA238F109800A7B254 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		227224CB238F109800A7B254 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		227224CD238F109800A7B254 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		227224CE238F109800A7B254 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		227224D1238F109800A7B254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		227224D4238F109800A7B254 /* CareGiver_1_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareGiver_1_0.xcdatamodel; sourceTree = "<group>"; };
+		227224D6238F109E00A7B254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		227224D9238F109E00A7B254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		227224DB238F109E00A7B254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227224DC238F109E00A7B254 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		227224E2238F109E00A7B254 /* CareGiver 1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CareGiver 1.0Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		227224E6238F109E00A7B254 /* CareGiver_1_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareGiver_1_0Tests.m; sourceTree = "<group>"; };
+		227224E8238F109E00A7B254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227224ED238F109E00A7B254 /* CareGiver 1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CareGiver 1.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		227224F1238F109E00A7B254 /* CareGiver_1_0UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareGiver_1_0UITests.m; sourceTree = "<group>"; };
+		227224F3238F109E00A7B254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		227224C4238F109800A7B254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227224DF238F109E00A7B254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227224EA238F109E00A7B254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		227224BE238F109700A7B254 = {
+			isa = PBXGroup;
+			children = (
+				227224C9238F109800A7B254 /* CareGiver 1.0 */,
+				227224E5238F109E00A7B254 /* CareGiver 1.0Tests */,
+				227224F0238F109E00A7B254 /* CareGiver 1.0UITests */,
+				227224C8238F109800A7B254 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		227224C8238F109800A7B254 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				227224C7238F109800A7B254 /* CareGiver 1.0.app */,
+				227224E2238F109E00A7B254 /* CareGiver 1.0Tests.xctest */,
+				227224ED238F109E00A7B254 /* CareGiver 1.0UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		227224C9238F109800A7B254 /* CareGiver 1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				227224CA238F109800A7B254 /* AppDelegate.h */,
+				227224CB238F109800A7B254 /* AppDelegate.m */,
+				227224CD238F109800A7B254 /* ViewController.h */,
+				227224CE238F109800A7B254 /* ViewController.m */,
+				227224D0238F109800A7B254 /* Main.storyboard */,
+				227224D6238F109E00A7B254 /* Assets.xcassets */,
+				227224D8238F109E00A7B254 /* LaunchScreen.storyboard */,
+				227224DB238F109E00A7B254 /* Info.plist */,
+				227224DC238F109E00A7B254 /* main.m */,
+				227224D3238F109800A7B254 /* CareGiver_1_0.xcdatamodeld */,
+			);
+			path = "CareGiver 1.0";
+			sourceTree = "<group>";
+		};
+		227224E5238F109E00A7B254 /* CareGiver 1.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				227224E6238F109E00A7B254 /* CareGiver_1_0Tests.m */,
+				227224E8238F109E00A7B254 /* Info.plist */,
+			);
+			path = "CareGiver 1.0Tests";
+			sourceTree = "<group>";
+		};
+		227224F0238F109E00A7B254 /* CareGiver 1.0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				227224F1238F109E00A7B254 /* CareGiver_1_0UITests.m */,
+				227224F3238F109E00A7B254 /* Info.plist */,
+			);
+			path = "CareGiver 1.0UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		227224C6238F109800A7B254 /* CareGiver 1.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227224F6238F109E00A7B254 /* Build configuration list for PBXNativeTarget "CareGiver 1.0" */;
+			buildPhases = (
+				227224C3238F109800A7B254 /* Sources */,
+				227224C4238F109800A7B254 /* Frameworks */,
+				227224C5238F109800A7B254 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CareGiver 1.0";
+			productName = "CareGiver 1.0";
+			productReference = 227224C7238F109800A7B254 /* CareGiver 1.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		227224E1238F109E00A7B254 /* CareGiver 1.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227224F9238F109E00A7B254 /* Build configuration list for PBXNativeTarget "CareGiver 1.0Tests" */;
+			buildPhases = (
+				227224DE238F109E00A7B254 /* Sources */,
+				227224DF238F109E00A7B254 /* Frameworks */,
+				227224E0238F109E00A7B254 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				227224E4238F109E00A7B254 /* PBXTargetDependency */,
+			);
+			name = "CareGiver 1.0Tests";
+			productName = "CareGiver 1.0Tests";
+			productReference = 227224E2238F109E00A7B254 /* CareGiver 1.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		227224EC238F109E00A7B254 /* CareGiver 1.0UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227224FC238F109E00A7B254 /* Build configuration list for PBXNativeTarget "CareGiver 1.0UITests" */;
+			buildPhases = (
+				227224E9238F109E00A7B254 /* Sources */,
+				227224EA238F109E00A7B254 /* Frameworks */,
+				227224EB238F109E00A7B254 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				227224EF238F109E00A7B254 /* PBXTargetDependency */,
+			);
+			name = "CareGiver 1.0UITests";
+			productName = "CareGiver 1.0UITests";
+			productReference = 227224ED238F109E00A7B254 /* CareGiver 1.0UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		227224BF238F109800A7B254 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Atlas Life Systems";
+				TargetAttributes = {
+					227224C6238F109800A7B254 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					227224E1238F109E00A7B254 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 227224C6238F109800A7B254;
+					};
+					227224EC238F109E00A7B254 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 227224C6238F109800A7B254;
+					};
+				};
+			};
+			buildConfigurationList = 227224C2238F109800A7B254 /* Build configuration list for PBXProject "CareGiver 1.0" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 227224BE238F109700A7B254;
+			productRefGroup = 227224C8238F109800A7B254 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				227224C6238F109800A7B254 /* CareGiver 1.0 */,
+				227224E1238F109E00A7B254 /* CareGiver 1.0Tests */,
+				227224EC238F109E00A7B254 /* CareGiver 1.0UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		227224C5238F109800A7B254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227224DA238F109E00A7B254 /* LaunchScreen.storyboard in Resources */,
+				227224D7238F109E00A7B254 /* Assets.xcassets in Resources */,
+				227224D2238F109800A7B254 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227224E0238F109E00A7B254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227224EB238F109E00A7B254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		227224C3238F109800A7B254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227224CF238F109800A7B254 /* ViewController.m in Sources */,
+				227224D5238F109800A7B254 /* CareGiver_1_0.xcdatamodeld in Sources */,
+				227224DD238F109E00A7B254 /* main.m in Sources */,
+				227224CC238F109800A7B254 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227224DE238F109E00A7B254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227224E7238F109E00A7B254 /* CareGiver_1_0Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227224E9238F109E00A7B254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227224F2238F109E00A7B254 /* CareGiver_1_0UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		227224E4238F109E00A7B254 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 227224C6238F109800A7B254 /* CareGiver 1.0 */;
+			targetProxy = 227224E3238F109E00A7B254 /* PBXContainerItemProxy */;
+		};
+		227224EF238F109E00A7B254 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 227224C6238F109800A7B254 /* CareGiver 1.0 */;
+			targetProxy = 227224EE238F109E00A7B254 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		227224D0238F109800A7B254 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				227224D1238F109800A7B254 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		227224D8238F109E00A7B254 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				227224D9238F109E00A7B254 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		227224F4238F109E00A7B254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		227224F5238F109E00A7B254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		227224F7238F109E00A7B254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR5DBY44D3;
+				INFOPLIST_FILE = "CareGiver 1.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.atlaslifesystems.dj.CareGiver-1-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		227224F8238F109E00A7B254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR5DBY44D3;
+				INFOPLIST_FILE = "CareGiver 1.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.atlaslifesystems.dj.CareGiver-1-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		227224FA238F109E00A7B254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR5DBY44D3;
+				INFOPLIST_FILE = "CareGiver 1.0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.atlaslifesystems.dj.CareGiver-1-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareGiver 1.0.app/CareGiver 1.0";
+			};
+			name = Debug;
+		};
+		227224FB238F109E00A7B254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR5DBY44D3;
+				INFOPLIST_FILE = "CareGiver 1.0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.atlaslifesystems.dj.CareGiver-1-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareGiver 1.0.app/CareGiver 1.0";
+			};
+			name = Release;
+		};
+		227224FD238F109E00A7B254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR5DBY44D3;
+				INFOPLIST_FILE = "CareGiver 1.0UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.atlaslifesystems.dj.CareGiver-1-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CareGiver 1.0";
+			};
+			name = Debug;
+		};
+		227224FE238F109E00A7B254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR5DBY44D3;
+				INFOPLIST_FILE = "CareGiver 1.0UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.atlaslifesystems.dj.CareGiver-1-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CareGiver 1.0";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		227224C2238F109800A7B254 /* Build configuration list for PBXProject "CareGiver 1.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227224F4238F109E00A7B254 /* Debug */,
+				227224F5238F109E00A7B254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227224F6238F109E00A7B254 /* Build configuration list for PBXNativeTarget "CareGiver 1.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227224F7238F109E00A7B254 /* Debug */,
+				227224F8238F109E00A7B254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227224F9238F109E00A7B254 /* Build configuration list for PBXNativeTarget "CareGiver 1.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227224FA238F109E00A7B254 /* Debug */,
+				227224FB238F109E00A7B254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227224FC238F109E00A7B254 /* Build configuration list for PBXNativeTarget "CareGiver 1.0UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227224FD238F109E00A7B254 /* Debug */,
+				227224FE238F109E00A7B254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		227224D3238F109800A7B254 /* CareGiver_1_0.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				227224D4238F109800A7B254 /* CareGiver_1_0.xcdatamodel */,
+			);
+			currentVersion = 227224D4238F109800A7B254 /* CareGiver_1_0.xcdatamodel */;
+			path = CareGiver_1_0.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 227224BF238F109800A7B254 /* Project object */;
+}
