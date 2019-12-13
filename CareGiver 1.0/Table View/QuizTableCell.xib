@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuizTableCell" rowHeight="188" id="PMW-JQ-84a" customClass="QuizTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PMW-JQ-84a" id="BM5-zr-7NG">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="167.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8r-9l-aJJ">
+                        <rect key="frame" x="20" y="10" width="374" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-DN-MaW">
+                        <rect key="frame" x="20" y="65" width="374" height="58"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWe-7Z-zu0">
+                        <rect key="frame" x="20" y="65" width="185" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Not at all"/>
+                        <connections>
+                            <action selector="button1Pressed:" destination="PMW-JQ-84a" eventType="touchUpInside" id="u95-TY-5Sk"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-N4-AMp">
+                        <rect key="frame" x="20" y="93" width="185" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="More than half the days"/>
+                        <connections>
+                            <action selector="button3Pressed:" destination="PMW-JQ-84a" eventType="touchUpInside" id="2z5-Nd-4PX"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieg-gw-3zz">
+                        <rect key="frame" x="209" y="93" width="185" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Nearly Every Day"/>
+                        <connections>
+                            <action selector="button4Pressed:" destination="PMW-JQ-84a" eventType="touchUpInside" id="ZuJ-gc-2vr"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu3-dK-FTy">
+                        <rect key="frame" x="209" y="65" width="185" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Several Days"/>
+                        <connections>
+                            <action selector="button2Pressed:" destination="PMW-JQ-84a" eventType="touchUpInside" id="Tt0-ZT-bKP"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E92-DU-VP1">
+                        <rect key="frame" x="183" y="124" width="49" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Submit"/>
+                        <connections>
+                            <action selector="submitButtonPressed:" destination="PMW-JQ-84a" eventType="touchUpInside" id="Vcf-a0-2hj"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="button1" destination="xWe-7Z-zu0" id="mLR-qq-vzU"/>
+                <outlet property="button2" destination="Lu3-dK-FTy" id="1fX-g4-Lff"/>
+                <outlet property="button3" destination="Bca-N4-AMp" id="Cha-nh-8XH"/>
+                <outlet property="button4" destination="ieg-gw-3zz" id="6C2-rS-Ucl"/>
+                <outlet property="buttonDividerImage" destination="hbe-DN-MaW" id="RF1-cM-kA7"/>
+                <outlet property="quizLabel" destination="i8r-9l-aJJ" id="QA6-DH-VQb"/>
+                <outlet property="submitButton" destination="E92-DU-VP1" id="7V1-87-Rd1"/>
+            </connections>
+            <point key="canvasLocation" x="127.53623188405798" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

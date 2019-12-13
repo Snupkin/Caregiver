@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		227224CC238F109800A7B254 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224CB238F109800A7B254 /* AppDelegate.m */; };
-		227224CF238F109800A7B254 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224CE238F109800A7B254 /* ViewController.m */; };
 		227224D2238F109800A7B254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227224D0238F109800A7B254 /* Main.storyboard */; };
 		227224D5238F109800A7B254 /* CareGiver_1_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227224D3238F109800A7B254 /* CareGiver_1_0.xcdatamodeld */; };
 		227224D7238F109E00A7B254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227224D6238F109E00A7B254 /* Assets.xcassets */; };
@@ -16,6 +15,9 @@
 		227224DD238F109E00A7B254 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224DC238F109E00A7B254 /* main.m */; };
 		227224E7238F109E00A7B254 /* CareGiver_1_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224E6238F109E00A7B254 /* CareGiver_1_0Tests.m */; };
 		227224F2238F109E00A7B254 /* CareGiver_1_0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227224F1238F109E00A7B254 /* CareGiver_1_0UITests.m */; };
+		22722501238F128000A7B254 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22722500238F128000A7B254 /* TableViewController.m */; };
+		22E605382397308200A3EBDE /* QuizTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E605372397308200A3EBDE /* QuizTableViewCell.m */; };
+		22E6053A2398009900A3EBDE /* QuizTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E605392398009900A3EBDE /* QuizTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		227224C7238F109800A7B254 /* CareGiver 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CareGiver 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		227224CA238F109800A7B254 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		227224CB238F109800A7B254 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		227224CD238F109800A7B254 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		227224CE238F109800A7B254 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		227224D1238F109800A7B254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		227224D4238F109800A7B254 /* CareGiver_1_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareGiver_1_0.xcdatamodel; sourceTree = "<group>"; };
 		227224D6238F109E00A7B254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,11 @@
 		227224ED238F109E00A7B254 /* CareGiver 1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CareGiver 1.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		227224F1238F109E00A7B254 /* CareGiver_1_0UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CareGiver_1_0UITests.m; sourceTree = "<group>"; };
 		227224F3238F109E00A7B254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227224FF238F128000A7B254 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		22722500238F128000A7B254 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		22E605362397308200A3EBDE /* QuizTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizTableViewCell.h; sourceTree = "<group>"; };
+		22E605372397308200A3EBDE /* QuizTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizTableViewCell.m; sourceTree = "<group>"; };
+		22E605392398009900A3EBDE /* QuizTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +110,9 @@
 			children = (
 				227224CA238F109800A7B254 /* AppDelegate.h */,
 				227224CB238F109800A7B254 /* AppDelegate.m */,
-				227224CD238F109800A7B254 /* ViewController.h */,
-				227224CE238F109800A7B254 /* ViewController.m */,
 				227224D0238F109800A7B254 /* Main.storyboard */,
+				22BC5E3923A2F6A700BDADE4 /* Images */,
+				22E605322391C69200A3EBDE /* Table View */,
 				227224D6238F109E00A7B254 /* Assets.xcassets */,
 				227224D8238F109E00A7B254 /* LaunchScreen.storyboard */,
 				227224DB238F109E00A7B254 /* Info.plist */,
@@ -133,6 +138,25 @@
 				227224F3238F109E00A7B254 /* Info.plist */,
 			);
 			path = "CareGiver 1.0UITests";
+			sourceTree = "<group>";
+		};
+		22BC5E3923A2F6A700BDADE4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		22E605322391C69200A3EBDE /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				227224FF238F128000A7B254 /* TableViewController.h */,
+				22722500238F128000A7B254 /* TableViewController.m */,
+				22E605362397308200A3EBDE /* QuizTableViewCell.h */,
+				22E605372397308200A3EBDE /* QuizTableViewCell.m */,
+				22E605392398009900A3EBDE /* QuizTableCell.xib */,
+			);
+			path = "Table View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +265,7 @@
 				227224DA238F109E00A7B254 /* LaunchScreen.storyboard in Resources */,
 				227224D7238F109E00A7B254 /* Assets.xcassets in Resources */,
 				227224D2238F109800A7B254 /* Main.storyboard in Resources */,
+				22E6053A2398009900A3EBDE /* QuizTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227224CF238F109800A7B254 /* ViewController.m in Sources */,
 				227224D5238F109800A7B254 /* CareGiver_1_0.xcdatamodeld in Sources */,
 				227224DD238F109E00A7B254 /* main.m in Sources */,
+				22E605382397308200A3EBDE /* QuizTableViewCell.m in Sources */,
 				227224CC238F109800A7B254 /* AppDelegate.m in Sources */,
+				22722501238F128000A7B254 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
