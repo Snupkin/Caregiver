@@ -24,6 +24,16 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    
+#pragma mark - TableView Footer Section
+    /*
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 500)];
+    [footerView setBackgroundColor:[UIColor lightGrayColor]];
+    self.tableView.tableFooterView = footerView;
+    [self.tableView setSeparatorStyle:(UITableViewCellSeparatorStyleNone)];
+    [self.tableView setContentInset:(UIEdgeInsetsMake(0, 0, -500, 0))];
+    */
+    
 #pragma mark - Quiz Property Initialization
     
     self.myCell = [[QuizTableViewCell alloc] init];
@@ -80,8 +90,7 @@
     // Configure the cell...
     // For the first cell display the quiz title
     if (indexPath.section == 0){
-        cell.backgroundColor = [UIColor lightGrayColor];
-        
+cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f blue:213.0f/255.0f alpha:0.8f];
         // Text modifications
         //cell.quizLabel.font = [self findAdaptiveFontWithName:@"System" forUILabelSize:cell.quizLabel.frame.size withMinimumSize:54];
         cell.quizLabel.text = self.myCell.quizTitle;
@@ -92,6 +101,7 @@
         cell.button3.hidden = true;
         cell.button4.hidden = true;
         cell.submitButton.hidden = true;
+        
         
         // Button Divider Image
         cell.buttonDividerImage.image = nil;
@@ -109,7 +119,7 @@
         cell.submitButton.hidden = true;
         
         // Button Divider Image - Done in front end
-        // cell.buttonDividerImage.image = [UIImage imageNamed:@"buttonDivider.PNG"];
+         cell.buttonDividerImage.image = [UIImage imageNamed:@"buttonDivider.png"];
     }
     else {
         cell.backgroundColor = [UIColor lightGrayColor];
@@ -133,18 +143,16 @@
 
 #pragma mark - Table view data source
 
+// Function determines number of sections in cell
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
     // Return the number of sections.
     return 3;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightfForRowAtIndexPath:(NSIndexPath *)i{
-    return 148;
-}
-
 #pragma mark - Font Adjustments
 
+// Function auto adjusts text font to fit label container
 + (UIFont *)findAdaptiveFontWithName:(NSString *)fontName forUILabelSize:(CGSize)labelSize withMinimumSize:(NSInteger)minSize
 {
     UIFont *tempFont = nil;
@@ -179,6 +187,13 @@
     }
     
     return [UIFont fontWithName:fontName size:mid];
+}
+ // Function readjusts cell height
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 72;
+    }
+    return 156.5;
 }
 
 #pragma mark - Extra Unused Code

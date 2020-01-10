@@ -68,8 +68,4 @@
     // Configure the view for the selected state
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightfForRowAtIndexPath:(NSIndexPath *)i{
-    return 188;
-}
-
 @end
