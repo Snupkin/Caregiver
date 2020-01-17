@@ -7,6 +7,7 @@
 //
 
 #import "UserInformationViewController.h"
+#import "UserInformation.h"
 
 @interface UserInformationViewController ()
 
@@ -18,29 +19,65 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-#pragma mark - Intial Hides
-    // Hide Labels on Load
-    self.nameLabel.hidden = true;
-    self.ageLabel.hidden = true;
-    self.dateOfBirthLabel.hidden = true;
-    self.heightLabel.hidden = true;
-    self.weightLabel.hidden = true;
-    self.sexLabel.hidden = true;
-    self.genderLabel.hidden = true;
-    
-    // Hide Headers on Load
-    self.nameHeader.hidden = true;
-    self.ageHeader.hidden = true;
-    self.dateOfBirthHeader.hidden = true;
-    self.heightHeader.hidden = true;
-    self.weightHeader.hidden = true;
-    self.sexHeader.hidden = true;
-    self.genderHeader.hidden = true;
-    
-    // Hide Edit Button
-    self.editInfoButton.hidden = true;
-    
-#pragma mark - NSDictionary for User's Personal Information
+#pragma mark - viewDidLoad Hides
+    // Hide Labels on Load if not previously filled
+    // Unfilled condition
+    if ([[UserInformation sharedInstance].userFullName isEqualToString:@"Unspecified"]) {
+        self.nameLabel.hidden = true;
+        self.ageLabel.hidden = true;
+        self.dateOfBirthLabel.hidden = true;
+        self.heightLabel.hidden = true;
+        self.weightLabel.hidden = true;
+        self.sexLabel.hidden = true;
+        self.genderLabel.hidden = true;
+        
+        // Hide Headers on Load
+        self.nameHeader.hidden = true;
+        self.ageHeader.hidden = true;
+        self.dateOfBirthHeader.hidden = true;
+        self.heightHeader.hidden = true;
+        self.weightHeader.hidden = true;
+        self.sexHeader.hidden = true;
+        self.genderHeader.hidden = true;
+        
+        // Hide Edit Button
+        self.editInfoButton.hidden = true;
+    }
+    // Filled condition
+    else {
+        // Hide textfields/ submit button & show headers/ labels/ edit button
+        // Labels/ Edit Button
+        self.nameLabel.hidden = false;
+        self.ageLabel.hidden = false;
+        self.dateOfBirthLabel.hidden = false;
+        self.heightLabel.hidden = false;
+        self.weightLabel.hidden = false;
+        self.sexLabel.hidden = false;
+        self.genderLabel.hidden = false;
+        self.editInfoButton.hidden = false;
+        
+        // Headers
+        self.nameHeader.hidden = false;
+        self.ageHeader.hidden = false;
+        self.dateOfBirthHeader.hidden = false;
+        self.heightHeader.hidden = false;
+        self.weightHeader.hidden = false;
+        self.sexHeader.hidden = false;
+        self.genderHeader.hidden = false;
+        
+        // Textfields/ Submit Button
+        self.lastNameTextField.hidden = true;
+        self.firstNameTextField.hidden = true;
+        self.ageTextField.hidden = true;
+        self.dateOfBirthTextField.hidden = true;
+        self.heightTextField.hidden = true;
+        self.weightTextField.hidden = true;
+        self.sexTextField.hidden = true;
+        self.genderTextField.hidden = true;
+        self.userInfoSubmitButton.hidden = true;
+        self.promptHeader.hidden = true;
+    }
+// #pragma mark - NSDictionary for User's Personal Information
     // Initialie dictionary
     //NSMutableDictionary *userInformation = [[NSMutableDictionary alloc] init];
     
@@ -59,13 +96,24 @@
 #pragma mark - Button Functions
 - (IBAction)userInfoSubmitButtonPressed:(UIButton *)sender {
     // Update Label Fields Text with Text Field Text
-    self.nameLabel.text = [NSString stringWithFormat:@"%@/%@/%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
+    self.nameLabel.text = [NSString stringWithFormat:@"%@%@%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
     self.ageLabel.text = self.ageTextField.text;
     self.dateOfBirthLabel.text = self.dateOfBirthTextField.text;
-    self.heightLabel.text = self.heightTextField.text;
-    self.weightLabel.text = self.weightTextField.text;
-    self.sexTextField.text = self.sexTextField.text;
+    self.heightLabel.text = [NSString stringWithFormat:@"%@%@", self.heightTextField.text, @" cm"];
+    self.weightLabel.text = [NSString stringWithFormat:@"%@%@", self.weightTextField.text, @" kg"];
+    self.sexLabel.text = self.sexTextField.text;
     self.genderLabel.text = self.genderTextField.text;
+    
+    // Update User Information with Text Field Text
+    [UserInformation sharedInstance].userFullName = [NSString stringWithFormat:@"%@%@%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
+    [UserInformation sharedInstance].userFirstName = self.firstNameTextField.text;
+    [UserInformation sharedInstance].userLastName = self.lastNameTextField.text;
+    [UserInformation sharedInstance].userAge = self.ageTextField.text;
+    [UserInformation sharedInstance].userDateOfBirth = self.dateOfBirthTextField.text;
+    [UserInformation sharedInstance].userHeight = [self.heightTextField.text floatValue];
+    [UserInformation sharedInstance].userWeight = [self.weightTextField.text floatValue];
+    [UserInformation sharedInstance].userSex = self.sexTextField.text;
+    [UserInformation sharedInstance].userGender = self.genderTextField.text;
     
     // Hide textfields/ submit button & show headers/ labels/ edit button
     // Labels/ Edit Button 
@@ -82,7 +130,7 @@
     self.nameHeader.hidden = false;
     self.ageHeader.hidden = false;
     self.dateOfBirthHeader.hidden = false;
-    self.heightLabel.hidden = false;
+    self.heightHeader.hidden = false;
     self.weightHeader.hidden = false;
     self.sexHeader.hidden = false;
     self.genderHeader.hidden = false;
@@ -117,7 +165,7 @@
     self.nameHeader.hidden = true;
     self.ageHeader.hidden = true;
     self.dateOfBirthHeader.hidden = true;
-    self.heightLabel.hidden = true;
+    self.heightHeader.hidden = true;
     self.weightHeader.hidden = true;
     self.sexHeader.hidden = true;
     self.genderHeader.hidden = true;

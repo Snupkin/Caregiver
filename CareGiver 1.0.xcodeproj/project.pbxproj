@@ -21,6 +21,9 @@
 		22BC5E3F23AC12E200BDADE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC5E3E23AC12E200BDADE4 /* ViewController.m */; };
 		22E605382397308200A3EBDE /* QuizTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E605372397308200A3EBDE /* QuizTableViewCell.m */; };
 		22E6053A2398009900A3EBDE /* QuizTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E605392398009900A3EBDE /* QuizTableCell.xib */; };
+		22E7794D23CCD65E005A009F /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7794C23CCD65E005A009F /* UserInformation.m */; };
+		22E7795023CD7BB8005A009F /* PHQ9QuizInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7794F23CD7BB8005A009F /* PHQ9QuizInfo.m */; };
+		22E7795323CDC283005A009F /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7795223CDC283005A009F /* QuizViewController.m */; };
 		22EE345C23C51B470093C4BF /* ResearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE345B23C51B470093C4BF /* ResearchTableViewController.m */; };
 		22EE346023C5288D0093C4BF /* smileyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EE345D23C5288C0093C4BF /* smileyFace.png */; };
 		22EE346123C5288D0093C4BF /* mehFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EE345E23C5288C0093C4BF /* mehFace.png */; };
@@ -70,6 +73,12 @@
 		22E605362397308200A3EBDE /* QuizTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizTableViewCell.h; sourceTree = "<group>"; };
 		22E605372397308200A3EBDE /* QuizTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizTableViewCell.m; sourceTree = "<group>"; };
 		22E605392398009900A3EBDE /* QuizTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizTableCell.xib; sourceTree = "<group>"; };
+		22E7794B23CCD65D005A009F /* UserInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInformation.h; sourceTree = "<group>"; };
+		22E7794C23CCD65E005A009F /* UserInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInformation.m; sourceTree = "<group>"; };
+		22E7794E23CD7BB8005A009F /* PHQ9QuizInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHQ9QuizInfo.h; sourceTree = "<group>"; };
+		22E7794F23CD7BB8005A009F /* PHQ9QuizInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHQ9QuizInfo.m; sourceTree = "<group>"; };
+		22E7795123CDC283005A009F /* QuizViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		22E7795223CDC283005A009F /* QuizViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		22EE345A23C51B470093C4BF /* ResearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResearchTableViewController.h; sourceTree = "<group>"; };
 		22EE345B23C51B470093C4BF /* ResearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResearchTableViewController.m; sourceTree = "<group>"; };
 		22EE345D23C5288C0093C4BF /* smileyFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smileyFace.png; path = Images/smileyFace.png; sourceTree = SOURCE_ROOT; };
@@ -141,6 +150,7 @@
 				227224CA238F109800A7B254 /* AppDelegate.h */,
 				227224CB238F109800A7B254 /* AppDelegate.m */,
 				227224D0238F109800A7B254 /* Main.storyboard */,
+				22E7795423CDC39D005A009F /* Quiz View */,
 				22EE345623C518660093C4BF /* Research Papers */,
 				22EE346623C544BE0093C4BF /* User Info Page */,
 				22BC5E3C23AC126600BDADE4 /* Home Page */,
@@ -198,9 +208,20 @@
 				22722500238F128000A7B254 /* TableViewController.m */,
 				22E605362397308200A3EBDE /* QuizTableViewCell.h */,
 				22E605372397308200A3EBDE /* QuizTableViewCell.m */,
+				22E7794E23CD7BB8005A009F /* PHQ9QuizInfo.h */,
+				22E7794F23CD7BB8005A009F /* PHQ9QuizInfo.m */,
 				22E605392398009900A3EBDE /* QuizTableCell.xib */,
 			);
 			path = "Table View";
+			sourceTree = "<group>";
+		};
+		22E7795423CDC39D005A009F /* Quiz View */ = {
+			isa = PBXGroup;
+			children = (
+				22E7795123CDC283005A009F /* QuizViewController.h */,
+				22E7795223CDC283005A009F /* QuizViewController.m */,
+			);
+			path = "Quiz View";
 			sourceTree = "<group>";
 		};
 		22EE345623C518660093C4BF /* Research Papers */ = {
@@ -217,6 +238,8 @@
 			children = (
 				22EE346323C542DF0093C4BF /* UserInformationViewController.h */,
 				22EE346423C542DF0093C4BF /* UserInformationViewController.m */,
+				22E7794B23CCD65D005A009F /* UserInformation.h */,
+				22E7794C23CCD65E005A009F /* UserInformation.m */,
 			);
 			path = "User Info Page";
 			sourceTree = "<group>";
@@ -358,12 +381,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BC5E3F23AC12E200BDADE4 /* ViewController.m in Sources */,
+				22E7794D23CCD65E005A009F /* UserInformation.m in Sources */,
 				22EE345C23C51B470093C4BF /* ResearchTableViewController.m in Sources */,
 				227224D5238F109800A7B254 /* CareGiver_1_0.xcdatamodeld in Sources */,
 				227224DD238F109E00A7B254 /* main.m in Sources */,
 				22E605382397308200A3EBDE /* QuizTableViewCell.m in Sources */,
+				22E7795323CDC283005A009F /* QuizViewController.m in Sources */,
 				227224CC238F109800A7B254 /* AppDelegate.m in Sources */,
 				22EE346523C542DF0093C4BF /* UserInformationViewController.m in Sources */,
+				22E7795023CD7BB8005A009F /* PHQ9QuizInfo.m in Sources */,
 				22722501238F128000A7B254 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

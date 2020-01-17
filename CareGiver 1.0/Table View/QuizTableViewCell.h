@@ -12,14 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QuizTableViewCell : UITableViewCell
 
-#pragma mark - Quiz Properties
-
-@property (strong, nonatomic) NSMutableArray *quizQuestions;
-@property (strong, nonatomic) NSString *quizTitle;
-@property (strong, nonatomic) NSMutableArray *scoreArray;
-@property (strong, nonatomic) NSNumber *quizScore;
-@property (nonatomic) bool riskAlert;
-@property (nonatomic) NSInteger lastClickedRow;
+//#pragma mark - Quiz Properties
+//
+//@property (strong, nonatomic) NSMutableArray *quizQuestions;
+//@property (strong, nonatomic) NSString *quizTitle;
+//@property (strong, nonatomic) NSMutableArray *scoreArray;
+//@property (strong, nonatomic) NSNumber *quizScore;
+//@property (nonatomic) bool riskAlert;
+//@property (nonatomic) NSInteger lastClickedRow;
 
 #pragma mark - IB Outlets
 
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Functions
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

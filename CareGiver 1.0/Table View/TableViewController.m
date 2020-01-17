@@ -6,8 +6,13 @@
 //  Copyright © 2019 Atlas Life Systems. All rights reserved.
 //
 
+/*
+ This class is meant to be a quiz implementation of PHQ-9 using a tableview
+*/
+
 #import "TableViewController.h"
 #import "QuizTableViewCell.h"
+#import "PHQ9QuizInfo.h"
 
 @interface TableViewController ()
 
@@ -38,24 +43,7 @@
     
     self.myCell = [[QuizTableViewCell alloc] init];
 
-    // Define the quiz title
-    self.myCell.quizTitle = @"How often have you been bothered by the following over the past 2 weeks?";
-    // Define the quiz questions
-    NSString *question1 = @"1. Little interest or pleasure in doing things?";
-    NSString *question2 = @"2. Feeling down, depressed, or hopeless?";
-    NSString *question3 = @"3. Trouble falling asleep or staying asleep (insomnia)?";
-    NSString *question4 = @"4. Sleeping too much (hypersomnia)?";
-    NSString *question5 = @"5. Feeling tired or having little energy?";
-    NSString *question6 = @"6. Poor appetite (excluding dieting)?";
-    NSString *question7 = @"7. Overeating (excluding dieting)?";
-    NSString *question8 = @"8. Feeling bad about yourself - or that you are a failure or have let yourself or your family down?";
-    NSString *question9 = @"9. Trouble concentrating on thigs, such as reading the newspaper or watching television?";
-    NSString *question10 = @"10. Moving or speaking so slowly that other people could have noticed (psychomotor retardation)?";
-    NSString *question11 = @"11. Being so fidgety or restless that you have been moving a lot more than usual (psychomotor agitation)?";
-    NSString *question12 = @"12. Thoughts that you would be better off dead (suicide), or thoughts of hurting yourself in some way?";
-    
-    // Order the questions in an array
-    self.myCell.quizQuestions = [[NSMutableArray alloc] initWithObjects: question1, question2, question3, question4, question5, question6, question7,  question8, question9, question10, question11, question12, nil];
+
 }
 
 #pragma mark - Cell Properties
@@ -69,7 +57,7 @@
     }
     // Main Body: Quiz Question Section
     else if (section == 1) {
-        return [self.myCell.quizQuestions count]; // Needs rows equal to number of questions (minus the nil placeholder)
+        return [[PHQ9QuizInfo sharedInstance].quizQuestions count]; // Needs rows equal to number of questions (minus the nil placeholder)
     }
     // Final Row: Submit button section
     else {
@@ -93,7 +81,7 @@
 cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f blue:213.0f/255.0f alpha:0.8f];
         // Text modifications
         //cell.quizLabel.font = [self findAdaptiveFontWithName:@"System" forUILabelSize:cell.quizLabel.frame.size withMinimumSize:54];
-        cell.quizLabel.text = self.myCell.quizTitle;
+        cell.quizLabel.text = [PHQ9QuizInfo sharedInstance].quizTitle;
         
         // Set the cell button states
         cell.button1.hidden = true;
@@ -102,14 +90,13 @@ cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f bl
         cell.button4.hidden = true;
         cell.submitButton.hidden = true;
         
-        
         // Button Divider Image
         cell.buttonDividerImage.image = nil;
     }
     else if (indexPath.section == 1){
         cell.backgroundColor = [UIColor colorWithRed:50.0f/255.0f green:100.0f/255.0f blue:200.0f/255.0f alpha:0.25f];
         
-        cell.quizLabel.text = [self.myCell.quizQuestions objectAtIndex:(indexPath.row)];
+        cell.quizLabel.text = [[PHQ9QuizInfo sharedInstance].quizQuestions objectAtIndex:(indexPath.row)];
         
         // Set the cell button states
         cell.button1.hidden = false;
@@ -141,6 +128,14 @@ cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f bl
     return cell;
 }
 
+#pragma mark - Get selected cell row
+// Get row of button pressed function
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [PHQ9QuizInfo sharedInstance].lastClickedRow = indexPath.row;
+    NSLog(@"This is row %ld", [PHQ9QuizInfo sharedInstance].lastClickedRow);
+    //    return self.lastClickedRow;
+}
+
 #pragma mark - Table view data source
 
 // Function determines number of sections in cell
@@ -151,7 +146,7 @@ cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f bl
 }
 
 #pragma mark - Font Adjustments
-
+/*
 // Function auto adjusts text font to fit label container
 + (UIFont *)findAdaptiveFontWithName:(NSString *)fontName forUILabelSize:(CGSize)labelSize withMinimumSize:(NSInteger)minSize
 {
@@ -188,6 +183,8 @@ cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f bl
     
     return [UIFont fontWithName:fontName size:mid];
 }
+ */
+
  // Function readjusts cell height
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
