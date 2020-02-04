@@ -30,19 +30,20 @@
     if (myInstance == nil) {
     myInstance = [[[self class] alloc] init];
     // Create global instance
-        myInstance.userID = 0;
+        myInstance.userID = 000000000000;
         myInstance.userFullName = @"Unspecified";
         myInstance.userLastName = @"Unspecified";
         myInstance.userFirstName = @"Unspecified";
-        myInstance.userAge = @"Unspecified";
+        myInstance.userAge = [NSNumber numberWithInt:0];
         myInstance.userDateOfBirth = @"Unspecified";
-        myInstance.userHeight = 0.0;
-        myInstance.userWeight = 0.0;
+        myInstance.userHeight = [NSNumber numberWithFloat:0.0];
+        myInstance.userWeight = [NSNumber numberWithFloat:0.0];
         myInstance.userSex = @"Unspecified";
         myInstance.userGender = @"Unspecified";
         
         myInstance.scoreArrayArray = [[NSMutableArray alloc] init];
         myInstance.quizDateTime = [[NSMutableArray alloc] init];
+        myInstance.riskAlert = 0;
         
     }
     return myInstance;

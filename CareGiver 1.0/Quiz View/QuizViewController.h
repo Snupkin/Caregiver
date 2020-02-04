@@ -12,11 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QuizViewController : UIViewController
 
-@property (nonatomic) NSInteger questionCount;
 @property (strong, nonatomic) NSMutableArray *scoreArray;
-@property (strong, nonatomic) NSNumber *quizScore;
 @property (strong, nonatomic) NSString *quizDate;
+@property (strong, nonatomic) NSNumber *quizScore;
+
+@property (nonatomic) NSInteger questionCount;
 @property (nonatomic) bool riskAlert;
+
 #pragma mark - IBOutlets
 // Not Buttons
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
@@ -35,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIButton *questionBackButton;
 @property (strong, nonatomic) IBOutlet UIButton *questionNextButton;
 
-
+	
 #pragma mark - IBActions
 
 - (IBAction)button0Pressed:(UIButton *)sender;
@@ -47,6 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)questionNextButtonPressed:(UIButton *)sender;
 - (IBAction)startButtonPressed:(UIButton *)sender;
 
+- (void)combineQuizData:(NSMutableArray *)quizScoreArray totalQuizScore:(NSNumber *)quizScore dateOfQuiz:(NSString *)quizDate isAtRisk:(BOOL)riskAlert;
 
 @end
 

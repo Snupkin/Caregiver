@@ -22,7 +22,8 @@
 #pragma mark - viewDidLoad Hides
     // Hide Labels on Load if not previously filled
     // Unfilled condition
-    if ([[UserInformation sharedInstance].userFullName isEqualToString:@"Unspecified"]) {
+    if ([UserInformation sharedInstance].userAge == 0 && [[UserInformation sharedInstance].userDateOfBirth isEqualToString:@"Unspecified"] && [UserInformation sharedInstance].userHeight == [NSNumber numberWithFloat:0.0] && [UserInformation sharedInstance].userWeight == [NSNumber numberWithFloat:0.0] && [[UserInformation sharedInstance].userSex isEqualToString:@"Unspecified"] && [[UserInformation sharedInstance].userGender isEqualToString:@"Unspecified"]) {
+        // Hide Labels on Load
         self.nameLabel.hidden = true;
         self.ageLabel.hidden = true;
         self.dateOfBirthLabel.hidden = true;
@@ -66,8 +67,8 @@
         self.genderHeader.hidden = false;
         
         // Textfields/ Submit Button
-        self.lastNameTextField.hidden = true;
-        self.firstNameTextField.hidden = true;
+//        self.lastNameTextField.hidden = true;
+//        self.firstNameTextField.hidden = true;
         self.ageTextField.hidden = true;
         self.dateOfBirthTextField.hidden = true;
         self.heightTextField.hidden = true;
@@ -76,6 +77,15 @@
         self.genderTextField.hidden = true;
         self.userInfoSubmitButton.hidden = true;
         self.promptHeader.hidden = true;
+        
+        // Populate Labels with previously known fields
+        self.ageLabel.text = [[UserInformation sharedInstance].userAge stringValue];
+        self.dateOfBirthLabel.text = [UserInformation sharedInstance].userDateOfBirth;
+        self.heightLabel.text = [[UserInformation sharedInstance].userHeight stringValue];
+        self.weightLabel.text = [[UserInformation sharedInstance].userWeight stringValue];
+        self.sexLabel.text = [UserInformation sharedInstance].userSex;
+        self.genderLabel.text = [UserInformation sharedInstance].userGender;
+        
     }
 // #pragma mark - NSDictionary for User's Personal Information
     // Initialie dictionary
@@ -96,22 +106,41 @@
 #pragma mark - Button Functions
 - (IBAction)userInfoSubmitButtonPressed:(UIButton *)sender {
     // Update Label Fields Text with Text Field Text
-    self.nameLabel.text = [NSString stringWithFormat:@"%@%@%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
-    self.ageLabel.text = self.ageTextField.text;
-    self.dateOfBirthLabel.text = self.dateOfBirthTextField.text;
-    self.heightLabel.text = [NSString stringWithFormat:@"%@%@", self.heightTextField.text, @" cm"];
-    self.weightLabel.text = [NSString stringWithFormat:@"%@%@", self.weightTextField.text, @" kg"];
-    self.sexLabel.text = self.sexTextField.text;
-    self.genderLabel.text = self.genderTextField.text;
+//    self.nameLabel.text = [NSString stringWithFormat:@"%@%@%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
+    
+    if (self.ageTextField.text.length > 0) {
+        self.ageLabel.text = self.ageTextField.text;
+    }
+    if (self.dateOfBirthTextField.text.length >0) {
+        self.dateOfBirthLabel.text = self.dateOfBirthTextField.text;
+    }
+    if (self.heightTextField.text.length > 0) {
+        self.heightLabel.text = [NSString stringWithFormat:@"%@%@", self.heightTextField.text, @" cm"];
+    }
+    if (self.weightTextField.text.length > 0) {
+        self.weightLabel.text = [NSString stringWithFormat:@"%@%@", self.weightTextField.text, @" kg"];
+    }
+    if (self.sexTextField.text.length > 0) {
+        self.sexLabel.text = self.sexTextField.text;
+    }
+    if (self.genderTextField.text.length > 0) {
+        self.genderLabel.text = self.genderTextField.text;
+    }
+    // Define User ID
+    /*
+        probably going to need to get user id from the server where info is stored.
+     */
     
     // Update User Information with Text Field Text
-    [UserInformation sharedInstance].userFullName = [NSString stringWithFormat:@"%@%@%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
-    [UserInformation sharedInstance].userFirstName = self.firstNameTextField.text;
-    [UserInformation sharedInstance].userLastName = self.lastNameTextField.text;
-    [UserInformation sharedInstance].userAge = self.ageTextField.text;
+//    [UserInformation sharedInstance].userFullName = [NSString stringWithFormat:@"%@%@%@", self.lastNameTextField.text, @" ", self.firstNameTextField.text];
+//    [UserInformation sharedInstance].userFirstName = self.firstNameTextField.text;
+//    [UserInformation sharedInstance].userLastName = self.lastNameTextField.text;
+    
+//    [UserInformation sharedInstance].userID = 1;
+    [UserInformation sharedInstance].userAge = [NSNumber numberWithInteger:[self.ageTextField.text integerValue]];
     [UserInformation sharedInstance].userDateOfBirth = self.dateOfBirthTextField.text;
-    [UserInformation sharedInstance].userHeight = [self.heightTextField.text floatValue];
-    [UserInformation sharedInstance].userWeight = [self.weightTextField.text floatValue];
+    [UserInformation sharedInstance].userHeight = [NSNumber numberWithFloat:[self.heightTextField.text floatValue]];
+    [UserInformation sharedInstance].userWeight = [NSNumber numberWithFloat:[self.weightTextField.text floatValue]];
     [UserInformation sharedInstance].userSex = self.sexTextField.text;
     [UserInformation sharedInstance].userGender = self.genderTextField.text;
     
@@ -136,8 +165,8 @@
     self.genderHeader.hidden = false;
     
     // Textfields/ Submit Button
-    self.lastNameTextField.hidden = true;
-    self.firstNameTextField.hidden = true;
+//    self.lastNameTextField.hidden = true;
+//    self.firstNameTextField.hidden = true;
     self.ageTextField.hidden = true;
     self.dateOfBirthTextField.hidden = true;
     self.heightTextField.hidden = true;
@@ -146,7 +175,7 @@
     self.genderTextField.hidden = true;
     self.userInfoSubmitButton.hidden = true;
     self.promptHeader.hidden = true;
-
+    
 }
 
 - (IBAction)editInfoButtonsPressed:(UIButton *)sender {
@@ -171,8 +200,8 @@
     self.genderHeader.hidden = true;
     
     // Text Fields/ Submit Button
-    self.lastNameTextField.hidden = false;
-    self.firstNameTextField.hidden = false;
+//    self.lastNameTextField.hidden = false;
+//    self.firstNameTextField.hidden = false;
     self.ageTextField.hidden = false;
     self.dateOfBirthTextField.hidden = false;
     self.heightTextField.hidden = false;

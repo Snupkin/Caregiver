@@ -15,12 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - IB Outlets
 // Footer Buttons
 @property (strong, nonatomic) IBOutlet UIButton *quizButton;
+@property (strong, nonatomic) IBOutlet UIButton *quizAnalyticsButton;
+@property (strong, nonatomic) IBOutlet UIButton *userInfoButton;
 
 
 // Daily Quiz Buttons
-@property (strong, nonatomic) IBOutlet UIButton *smileyButton;
-@property (strong, nonatomic) IBOutlet UIButton *mehButton;
-@property (strong, nonatomic) IBOutlet UIButton *frownyButton;
+//@property (strong, nonatomic) IBOutlet UIButton *smileyButton;
+//@property (strong, nonatomic) IBOutlet UIButton *mehButton;
+//@property (strong, nonatomic) IBOutlet UIButton *frownyButton;
 
 // Background Image
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
@@ -28,11 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - IB Actions
 // PHQ-9 Action
 - (IBAction)quizButtonPressed:(UIButton *)sender;
+- (IBAction)quizAnalyticsButtonPressed:(UIButton *)sender;
+- (IBAction)userInfoButtonPressed:(UIButton *)sender;
 
 // Daily Quiz Buttons
-- (IBAction)smileyButtonPressed:(UIButton *)sender;
-- (IBAction)mehButtonPressed:(UIButton *)sender;
-- (IBAction)frownyButtonPressed:(UIButton *)sender;
+//- (IBAction)smileyButtonPressed:(UIButton *)sender;
+//- (IBAction)mehButtonPressed:(UIButton *)sender;
+//- (IBAction)frownyButtonPressed:(UIButton *)sender;
 
 
 

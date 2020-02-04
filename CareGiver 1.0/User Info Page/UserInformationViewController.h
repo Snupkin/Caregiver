@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UserInformationViewController : UIViewController
 
+
 #pragma mark - IB Outlets
 //Background Image
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
@@ -40,8 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *genderHeader;
 
 // Text Fields
-@property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
-@property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
+//@property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
+//@property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *ageTextField;
 @property (strong, nonatomic) IBOutlet UITextField *dateOfBirthTextField;
 @property (strong, nonatomic) IBOutlet UITextField *heightTextField;

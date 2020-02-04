@@ -31,6 +31,12 @@
 
 - (IBAction)quizButtonPressed:(UIButton *)sender {
 }
+
+- (IBAction)quizAnalyticsButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)userInfoButtonPressed:(UIButton *)sender {
+}
 - (IBAction)smileyButtonPressed:(UIButton *)sender {
 }
 

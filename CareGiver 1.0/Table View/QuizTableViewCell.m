@@ -27,29 +27,29 @@
 
 // Upon button press it stores the value in an array.
 - (IBAction)button1Pressed:(UIButton *)sender {
-    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"0"];
-    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
+//    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"0"];
+//    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
 }
 
 - (IBAction)button2Pressed:(UIButton *)sender {
-    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"1"];
-    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
+//    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"1"];
+//    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
 }
 
 - (IBAction)button3Pressed:(UIButton *)sender {
-    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"2"];
-    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
+//    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"2"];
+//    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
 }
 
 - (IBAction)button4Pressed:(UIButton *)sender {
-    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"3"];
-    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
+//    [[PHQ9QuizInfo sharedInstance].scoreArray replaceObjectAtIndex:([PHQ9QuizInfo sharedInstance].lastClickedRow) withObject:@"3"];
+//    NSLog(@"Row %li Score: %@", [PHQ9QuizInfo sharedInstance].lastClickedRow, [PHQ9QuizInfo sharedInstance].scoreArray[[PHQ9QuizInfo sharedInstance].lastClickedRow]);
 }
 // Sums up the values of scoreArray upon press
 - (IBAction)submitButtonPressed:(UIButton *)sender {
     // Sum scoreArray to get final score result
-    [PHQ9QuizInfo sharedInstance].quizScore = [[PHQ9QuizInfo sharedInstance].scoreArray valueForKeyPath:@"@sum.self"];
-    NSLog(@"Score: %@", [PHQ9QuizInfo sharedInstance].quizScore);
+//    [PHQ9QuizInfo sharedInstance].quizScore = [[PHQ9QuizInfo sharedInstance].scoreArray valueForKeyPath:@"@sum.self"];
+//    NSLog(@"Score: %@", [PHQ9QuizInfo sharedInstance].quizScore);
 }
 
 //// Get row of button pressed function

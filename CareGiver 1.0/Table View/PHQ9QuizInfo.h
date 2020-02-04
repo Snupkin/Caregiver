@@ -13,11 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PHQ9QuizInfo : NSObject
 
 @property (strong, nonatomic) NSMutableArray *quizQuestions;
-@property (strong, nonatomic) NSString *quizTitle;
+
+
+//@property (strong, nonatomic) NSString *quizTitle;
 //@property (strong, nonatomic) NSMutableArray *scoreArray;
 //@property (strong, nonatomic) NSNumber *quizScore;
 //@property (nonatomic) bool riskAlert;
-@property (nonatomic) NSInteger lastClickedRow;
+//@property (nonatomic) NSInteger lastClickedRow;
 
 + (PHQ9QuizInfo *) sharedInstance;
 

@@ -42,8 +42,6 @@
 #pragma mark - Quiz Property Initialization
     
     self.myCell = [[QuizTableViewCell alloc] init];
-
-
 }
 
 #pragma mark - Cell Properties
@@ -81,7 +79,7 @@
 cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f blue:213.0f/255.0f alpha:0.8f];
         // Text modifications
         //cell.quizLabel.font = [self findAdaptiveFontWithName:@"System" forUILabelSize:cell.quizLabel.frame.size withMinimumSize:54];
-        cell.quizLabel.text = [PHQ9QuizInfo sharedInstance].quizTitle;
+//        cell.quizLabel.text = [PHQ9QuizInfo sharedInstance].quizTitle;
         
         // Set the cell button states
         cell.button1.hidden = true;
@@ -131,8 +129,8 @@ cell.backgroundColor = [UIColor colorWithRed:81.0f/255.0f green:160.0f/255.0f bl
 #pragma mark - Get selected cell row
 // Get row of button pressed function
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [PHQ9QuizInfo sharedInstance].lastClickedRow = indexPath.row;
-    NSLog(@"This is row %ld", [PHQ9QuizInfo sharedInstance].lastClickedRow);
+//    [PHQ9QuizInfo sharedInstance].lastClickedRow = indexPath.row;
+//    NSLog(@"This is row %ld", [PHQ9QuizInfo sharedInstance].lastClickedRow);
     //    return self.lastClickedRow;
 }
 
