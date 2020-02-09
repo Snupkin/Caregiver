@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ResearchTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *labArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

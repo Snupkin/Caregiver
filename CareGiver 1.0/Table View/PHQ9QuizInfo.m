@@ -29,7 +29,7 @@ NSString *question7 = @"Overeating (excluding dieting)?";
 NSString *question8 = @"Feeling bad about yourself - or that you are a failure or have let yourself or your family down?";
 NSString *question9 = @"Trouble concentrating on things, such as reading the newspaper or watchin television?";
 NSString *question10 = @"Moving or speaking so slowly that other people could have noticed (psychomotor retardation)?";
-NSString *question11 = @"Being so fidgety or restless that you have been moving a lot more than usual (psychomotor agitation)?";
+NSString *question11 = @"Pacing, restlessness or an inability to sit still (psychomotor agitation)?";
 NSString *question12 = @"Thoughts that you would be better off dead (suicide), or thoughts of hurting yourself in some way?";
 
 + (PHQ9QuizInfo *) sharedInstance {

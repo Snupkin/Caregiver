@@ -44,6 +44,7 @@
         myInstance.scoreArrayArray = [[NSMutableArray alloc] init];
         myInstance.quizDateTime = [[NSMutableArray alloc] init];
         myInstance.riskAlert = 0;
+        myInstance.quizTaken = 0;
         
     }
     return myInstance;

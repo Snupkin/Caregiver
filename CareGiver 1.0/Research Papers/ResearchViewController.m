@@ -2,7 +2,7 @@
 //  ResearchViewController.m
 //  CareGiver 1.0
 //
-//  Created by Dj Avivi on 2020-01-07.
+//  Created by Dj Avivi on 2020-02-09.
 //  Copyright © 2020 Atlas Life Systems. All rights reserved.
 //
 
@@ -29,4 +29,6 @@
 }
 */
 
+- (IBAction)citationButtonPressed:(UIButton *)sender {
+}
 @end

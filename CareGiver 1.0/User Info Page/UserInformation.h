@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSMutableArray *scoreArrayArray; // Array of previous scoreArrays
 @property (strong, nonatomic) NSMutableArray *quizDateTime; // Date quiz was submitted
 @property (nonatomic) BOOL riskAlert;
+@property (nonatomic) BOOL quizTaken;
 
 + (UserInformation *) sharedInstance;
 @end
