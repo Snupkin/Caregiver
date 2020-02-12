@@ -256,6 +256,9 @@
                                 <rect key="frame" x="347" y="832" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelEditButtonPressed:" destination="Kq6-W9-eSx" eventType="touchUpInside" id="49N-AG-sn3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,6 +270,7 @@
                         <outlet property="ageLabel" destination="MBv-by-2Vq" id="730-TV-fjV"/>
                         <outlet property="ageTextField" destination="GXI-w1-43t" id="roV-KZ-BdM"/>
                         <outlet property="backgroundImage" destination="9Eu-pP-DZc" id="CQq-Sq-LKw"/>
+                        <outlet property="cancelEditButton" destination="lcH-Nd-i8k" id="HoH-o2-rJk"/>
                         <outlet property="dateOfBirthHeader" destination="02D-eS-w72" id="iBW-Z7-yl6"/>
                         <outlet property="dateOfBirthLabel" destination="RTO-Ch-cdn" id="a0w-Xv-BKL"/>
                         <outlet property="dateOfBirthTextField" destination="gZ6-K5-YJD" id="bo4-SY-rXb"/>
@@ -574,89 +578,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Authors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-nB-cEW">
-                                <rect key="frame" x="20" y="160" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqd-gB-hio">
-                                <rect key="frame" x="20" y="44" width="374" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keywords" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-Lf-2dJ">
-                                <rect key="frame" x="20" y="189" width="374" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwS-vl-U1j">
-                                <rect key="frame" x="20" y="240" width="374" height="239"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wellness Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCK-Z7-MvE">
-                                <rect key="frame" x="20" y="579" width="374" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-gh-67c">
                                 <rect key="frame" x="333" y="832" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Citations"/>
                                 <connections>
                                     <action selector="citationButtonPressed:" destination="o9p-rj-rp1" eventType="touchUpInside" id="uOI-gO-Zbc"/>
+                                    <segue destination="bkx-1l-ljD" kind="show" id="Ylm-8m-L5m"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Findings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vA-bW-yQm">
-                                <rect key="frame" x="20" y="487" width="374" height="84"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Limitations" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qn1-xM-0gK">
+                                <rect key="frame" x="20" y="662" width="184" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Limitations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5J-yN-AVk">
-                                <rect key="frame" x="20" y="638" width="182" height="186"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Subject Group" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJe-6V-hBo">
+                                <rect key="frame" x="210" y="662" width="184" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFz-MU-bKx">
-                                <rect key="frame" x="212" y="638" width="182" height="186"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Other Findings" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0EA-kF-VsC">
+                                <rect key="frame" x="20" y="549" width="374" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cf7-La-boF">
+                                <rect key="frame" x="20" y="102" width="374" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Authors" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4CP-5q-rok">
+                                <rect key="frame" x="20" y="218" width="374" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Keywords" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XW5-DF-5Ti">
+                                <rect key="frame" x="20" y="272" width="374" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Summary" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ovr-lF-7EL">
+                                <rect key="frame" x="20" y="326" width="374" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Wellness Task" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fuD-Qv-byF">
+                                <rect key="frame" x="20" y="490" width="374" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jrQ-Yi-eRc"/>
                     </view>
                     <connections>
-                        <outlet property="authorLabel" destination="h6i-nB-cEW" id="tBp-it-Kt4"/>
+                        <outlet property="authorsTextView" destination="4CP-5q-rok" id="V4v-km-2Af"/>
                         <outlet property="citationButton" destination="gZU-gh-67c" id="uL3-pn-vMk"/>
-                        <outlet property="keywordLabel" destination="Qa6-Lf-2dJ" id="Per-bX-Tnp"/>
-                        <outlet property="limitationsLabel" destination="A5J-yN-AVk" id="mLv-cG-N9K"/>
-                        <outlet property="otherFindingsLabel" destination="3vA-bW-yQm" id="nJo-Ub-PqQ"/>
-                        <outlet property="subjectGroupLabel" destination="VFz-MU-bKx" id="qa5-pD-Lb4"/>
-                        <outlet property="summaryLabel" destination="lwS-vl-U1j" id="ev3-fQ-bBu"/>
-                        <outlet property="titleLabel" destination="Iqd-gB-hio" id="ePd-cy-ooo"/>
-                        <outlet property="wellnessTaskLabel" destination="CCK-Z7-MvE" id="1cc-F1-Zwk"/>
+                        <outlet property="keywordsTextView" destination="XW5-DF-5Ti" id="1WH-RG-dRb"/>
+                        <outlet property="limitationsTextView" destination="qn1-xM-0gK" id="5MO-Q5-IPm"/>
+                        <outlet property="otherFindingsTextView" destination="0EA-kF-VsC" id="k1n-1S-TLz"/>
+                        <outlet property="subjectGroupTextView" destination="WJe-6V-hBo" id="k3F-KZ-YZ6"/>
+                        <outlet property="summaryTextView" destination="ovr-lF-7EL" id="rAY-T7-w3O"/>
+                        <outlet property="titleTextView" destination="Cf7-La-boF" id="6V0-Fg-BYO"/>
+                        <outlet property="wellnessTaskTextView" destination="fuD-Qv-byF" id="4Lb-Zt-cTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nk1-3N-HLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4724.6376811594209" y="805.58035714285711"/>
+        </scene>
+        <!--Citations View Controller-->
+        <scene sceneID="RlF-x0-ZiM">
+            <objects>
+                <viewController id="bkx-1l-ljD" customClass="CitationsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sLV-P8-6tu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Citations" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kux-vt-OLx">
+                                <rect key="frame" x="20" y="117" width="374" height="745"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C5R-c9-27Q"/>
+                    </view>
+                    <connections>
+                        <outlet property="citationsTextView" destination="Kux-vt-OLx" id="E1j-d8-rz9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJ3-Pc-mRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5492.753623188406" y="805.58035714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vmF-Nx-wPl">
@@ -682,6 +715,7 @@
         <image name="verticalButtonDivider.png" width="623" height="253"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OyX-T1-c6M"/>
         <segue reference="1LF-hC-tDh"/>
         <segue reference="jOB-D2-WJi"/>
     </inferredMetricsTieBreakers>

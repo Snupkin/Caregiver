@@ -7,23 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LabSummary.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ResearchViewController : UIViewController
 
-@property (strong, nonatomic) NSMutableArray *labArray;
+@property (strong, nonatomic) LabSummary *labData;
 
 #pragma mark - IBOutlets
-// Labels
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *authorLabel;
-@property (strong, nonatomic) IBOutlet UILabel *keywordLabel;
-@property (strong, nonatomic) IBOutlet UILabel *summaryLabel;
-@property (strong, nonatomic) IBOutlet UILabel *otherFindingsLabel;
-@property (strong, nonatomic) IBOutlet UILabel *wellnessTaskLabel;
-@property (strong, nonatomic) IBOutlet UILabel *limitationsLabel;
-@property (strong, nonatomic) IBOutlet UILabel *subjectGroupLabel;
+// Text Views
+@property (strong, nonatomic) IBOutlet UITextView *titleTextView;
+@property (strong, nonatomic) IBOutlet UITextView *authorsTextView;
+@property (strong, nonatomic) IBOutlet UITextView *keywordsTextView;
+@property (strong, nonatomic) IBOutlet UITextView *summaryTextView;
+@property (strong, nonatomic) IBOutlet UITextView *wellnessTaskTextView;
+@property (strong, nonatomic) IBOutlet UITextView *otherFindingsTextView;
+@property (strong, nonatomic) IBOutlet UITextView *limitationsTextView;
+@property (strong, nonatomic) IBOutlet UITextView *subjectGroupTextView;
 
 // Buttons
 @property (strong, nonatomic) IBOutlet UIButton *citationButton;

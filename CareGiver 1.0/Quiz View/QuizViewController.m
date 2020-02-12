@@ -53,6 +53,7 @@
     
     // Initialize question counter & quiz score & riskAlert
     self.questionCount = 0;
+    self.riskAlert = NO;
     
     // Quiz Date info
     NSLocale* currentLocale = [NSLocale currentLocale];
@@ -80,10 +81,8 @@
             quizRVC.quizDate = self.quizDate;
             quizRVC.scoreArray = self.scoreArray;
             quizRVC.riskAlert = self.riskAlert;
-            
         }
     }
-    
 }
 
 #pragma mark - Start/Submit Buttons
@@ -119,7 +118,7 @@
     NSLog(@"Quiz Score: %@", self.quizScore);
     
     // Store quiz score/s with date in user array.
-    [self combineQuizData:self.scoreArray totalQuizScore:self.quizScore dateOfQuiz:self.quizDate isAtRisk:self.riskAlert];
+//    [self combineQuizData:self.scoreArray totalQuizScore:self.quizScore dateOfQuiz:self.quizDate isAtRisk:self.riskAlert]; // This doesn't make sense
 }
 
 #pragma mark - Quiz Answer Buttons
@@ -132,7 +131,7 @@
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
         
         // Update Risk Alert
-        self.riskAlert = 0;
+        self.riskAlert = NO;
         [UserInformation sharedInstance].riskAlert = self.riskAlert;
         
         // Do Hides and Unhides
@@ -148,8 +147,9 @@
         self.submitButton.hidden = false;
         
         // Set Labels
-        self.riskInfoLabel.hidden = true;
+        self.riskInfoLabel.hidden = false;
         self.questionNumberLabel.text = @"That's all folks!";
+        self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
         self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
@@ -175,7 +175,7 @@
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
         
         // Update Risk Alert
-        self.riskAlert = 0;
+        self.riskAlert = NO;
         [UserInformation sharedInstance].riskAlert = self.riskAlert;
         
         // Do Hides and Unhides
@@ -191,7 +191,7 @@
         self.submitButton.hidden = false;
         
         // Set Labels
-        self.riskInfoLabel.hidden = true;
+        self.riskInfoLabel.hidden = false;
         self.questionNumberLabel.text = @"That's all folks!";
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
@@ -220,7 +220,7 @@
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
         
         // Update Risk Alert
-        self.riskAlert = 0;
+        self.riskAlert = NO;
         [UserInformation sharedInstance].riskAlert = self.riskAlert;
         
         // Do Hides and Unhides
@@ -236,11 +236,12 @@
         self.submitButton.hidden = false;
         
         // Set Labels
-        self.riskInfoLabel.hidden = true;
+        self.riskInfoLabel.hidden = false;
         self.questionNumberLabel.text = @"That's all folks!";
+        self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@          ||          Question 7: %@\nQuestion 2: %@          ||          Question 8: %@\nQuestion 3: %@          ||          Question 9: %@\nQuestion 4: %@          ||          Question 10: %@\nQuestion 5: %@          ||          Question 11: %@\nQuestion 6: %@          ||          Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
         
     }
     else {
@@ -264,7 +265,7 @@
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
         
         // Update Risk Alert
-        self.riskAlert = 1;
+        self.riskAlert = YES;
         [UserInformation sharedInstance].riskAlert = self.riskAlert;
         
         // Do Hides and Unhides
@@ -280,11 +281,12 @@
         self.submitButton.hidden = false;
         
         // Set Labels
-        self.riskInfoLabel.hidden = true;
+        self.riskInfoLabel.hidden = false;
         self.questionNumberLabel.text = @"That's all folks!";
+        self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@          ||          Question 7: %@\nQuestion 2: %@          ||          Question 8: %@\nQuestion 3: %@          ||          Question 9: %@\nQuestion 4: %@          ||          Question 10: %@\nQuestion 5: %@          ||          Question 11: %@\nQuestion 6: %@          ||          Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
         
     }
     else {

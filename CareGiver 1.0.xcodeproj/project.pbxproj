@@ -33,6 +33,7 @@
 		22EE346123C5288D0093C4BF /* mehFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EE345E23C5288C0093C4BF /* mehFace.png */; };
 		22EE346223C5288D0093C4BF /* frownyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EE345F23C5288C0093C4BF /* frownyFace.png */; };
 		22EE346523C542DF0093C4BF /* UserInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE346423C542DF0093C4BF /* UserInformationViewController.m */; };
+		22F82AB323F32DDB00C28399 /* CitationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB223F32DDB00C28399 /* CitationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		22EE345F23C5288C0093C4BF /* frownyFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frownyFace.png; path = Images/frownyFace.png; sourceTree = SOURCE_ROOT; };
 		22EE346323C542DF0093C4BF /* UserInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInformationViewController.h; sourceTree = "<group>"; };
 		22EE346423C542DF0093C4BF /* UserInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInformationViewController.m; sourceTree = "<group>"; };
+		22F82AB123F32DDB00C28399 /* CitationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CitationsViewController.h; sourceTree = "<group>"; };
+		22F82AB223F32DDB00C28399 /* CitationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitationsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,8 @@
 				22E3EB0923F032730056CA0A /* ResearchViewController.m */,
 				22E7906923E9F31F001E133E /* LabSummary.h */,
 				22E7906A23E9F31F001E133E /* LabSummary.m */,
+				22F82AB123F32DDB00C28399 /* CitationsViewController.h */,
+				22F82AB223F32DDB00C28399 /* CitationsViewController.m */,
 			);
 			path = "Research Papers";
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				22BC5E3F23AC12E200BDADE4 /* ViewController.m in Sources */,
 				22E7794D23CCD65E005A009F /* UserInformation.m in Sources */,
 				22EE345C23C51B470093C4BF /* ResearchTableViewController.m in Sources */,
+				22F82AB323F32DDB00C28399 /* CitationsViewController.m in Sources */,
 				227224D5238F109800A7B254 /* CareGiver_1_0.xcdatamodeld in Sources */,
 				22E7906B23E9F31F001E133E /* LabSummary.m in Sources */,
 				22E7902523E88799001E133E /* QuizResultsViewController.m in Sources */,

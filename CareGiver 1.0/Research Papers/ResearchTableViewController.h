@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+//#import "LabSummary.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ResearchTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *labArray;
+//@property (strong, nonatomic) LabSummary *currentLab;
 
 @end
 

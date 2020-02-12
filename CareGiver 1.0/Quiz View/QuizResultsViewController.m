@@ -42,11 +42,11 @@
         }
         else if (21 <= self.quizScore.integerValue && self.quizScore.integerValue  < 28) {
             // Depression Severity: Moderately Severe
-
+            
         }
         else {
             // Depression Severity: Severe
-
+            
         }
 }
 

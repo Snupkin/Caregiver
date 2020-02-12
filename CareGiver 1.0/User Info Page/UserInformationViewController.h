@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Buttons
 @property (strong, nonatomic) IBOutlet UIButton *userInfoSubmitButton;
 @property (strong, nonatomic) IBOutlet UIButton *editInfoButton;
+@property (strong, nonatomic) IBOutlet UIButton *cancelEditButton;
 
 // Label Fields
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -56,6 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Buttons
 - (IBAction)userInfoSubmitButtonPressed:(UIButton *)sender;
 - (IBAction)editInfoButtonsPressed:(UIButton *)sender;
+- (IBAction)cancelEditButtonPressed:(UIButton *)sender;
 
 
 

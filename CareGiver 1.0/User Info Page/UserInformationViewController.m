@@ -43,11 +43,12 @@
         
         // Hide Edit Button
         self.editInfoButton.hidden = true;
+        self.cancelEditButton.hidden = true;
     }
     // Filled condition
     else {
         // Hide textfields/ submit button & show headers/ labels/ edit button
-        // Labels/ Edit Button
+        // Labels
         self.nameLabel.hidden = false;
         self.ageLabel.hidden = false;
         self.dateOfBirthLabel.hidden = false;
@@ -55,7 +56,10 @@
         self.weightLabel.hidden = false;
         self.sexLabel.hidden = false;
         self.genderLabel.hidden = false;
+        
+        // Buttons
         self.editInfoButton.hidden = false;
+        self.cancelEditButton.hidden = true;
         
         // Headers
         self.nameHeader.hidden = false;
@@ -210,5 +214,40 @@
     self.genderTextField.hidden = false;
     self.userInfoSubmitButton.hidden = false;
     self.promptHeader.hidden = false;
+}
+
+- (IBAction)cancelEditButtonPressed:(UIButton *)sender {
+    // Hide textfields/ submit button & show headers/ labels/ edit button
+    // Labels/ Edit Button
+    self.nameLabel.hidden = false;
+    self.ageLabel.hidden = false;
+    self.dateOfBirthLabel.hidden = false;
+    self.heightLabel.hidden = false;
+    self.weightLabel.hidden = false;
+    self.sexLabel.hidden = false;
+    self.genderLabel.hidden = false;
+    
+    // Buttons
+    self.editInfoButton.hidden = false;
+    self.cancelEditButton.hidden = true;
+    self.userInfoSubmitButton.hidden = true;
+    
+    // Headers
+    self.nameHeader.hidden = false;
+    self.ageHeader.hidden = false;
+    self.dateOfBirthHeader.hidden = false;
+    self.heightHeader.hidden = false;
+    self.weightHeader.hidden = false;
+    self.sexHeader.hidden = false;
+    self.genderHeader.hidden = false;
+    
+    // Textfields
+    self.ageTextField.hidden = true;
+    self.dateOfBirthTextField.hidden = true;
+    self.heightTextField.hidden = true;
+    self.weightTextField.hidden = true;
+    self.sexTextField.hidden = true;
+    self.genderTextField.hidden = true;
+    self.promptHeader.hidden = true;
 }
 @end
