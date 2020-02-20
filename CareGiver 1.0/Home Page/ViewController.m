@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UserInformation.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // Deterimine Time since last quiz
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSInteger daysSinceLastQuiz = [gregorian component:NSCalendarUnitDay fromDate:[UserInformation sharedInstance].quizDateTime.lastObject];
     
+    // Conditional to prevent quiz from being taken more than once every two weeks
+    if ([UserInformation sharedInstance].quizTaken && daysSinceLastQuiz >= 14) {
+        self.quizButton.hidden = true; // Hide quiz button so it can't be taken
+    }
+    else {
+        self.quizButton.hidden = false;
+    }
     
     
 }
@@ -39,6 +50,9 @@
 }
 
 - (IBAction)userInfoButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)favouritesButtonPressed:(UIButton *)sender {
 }
 - (IBAction)smileyButtonPressed:(UIButton *)sender {
 }

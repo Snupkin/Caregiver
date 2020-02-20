@@ -43,21 +43,13 @@
     // Set initial label values
     self.buttonPromptLabel.text = @"Press 'Start' to begin the questionaire.";
     self.questionLabel.text = @"This questionnaire will help assess your mental health and healthcare goals. \n \nPlease answer the following 12 questions as accurately as possible.";
-    // Set Text Alignment for Labels
-//    self.questionLabel.numberOfLines = 0;
-//    self.riskInfoLabel.numberOfLines = 0;
-//    [self.questionLabel sizeToFit];
-//    [self.riskInfoLabel sizeToFit];
 
-//    self.riskInfoLabel.text = @"How often have you been bothered by the following over the past 2 weeks?";
-    
     // Initialize question counter & quiz score & riskAlert
     self.questionCount = 0;
     self.riskAlert = NO;
     
     // Quiz Date info
-    NSLocale* currentLocale = [NSLocale currentLocale];
-    self.quizDate = [[NSDate date] descriptionWithLocale:currentLocale];
+    self.quizDate = [NSDate date];
     
     // Initialize Quiz Scores
     self.quizScore = [NSNumber numberWithInteger:0];
@@ -116,9 +108,16 @@
     // Sum up individual question scores
     self.quizScore = [self.scoreArray valueForKeyPath:@"@sum.self"];
     NSLog(@"Quiz Score: %@", self.quizScore);
+    // Store quiz score info
+    [[UserInformation sharedInstance].scoreArrayArray addObject:self.scoreArray];
+    [[UserInformation sharedInstance].quizDateTime addObject:self.quizDate];
+    [UserInformation sharedInstance].quizTaken = YES; // Flag that quiz was taken
     
-    // Store quiz score/s with date in user array.
-//    [self combineQuizData:self.scoreArray totalQuizScore:self.quizScore dateOfQuiz:self.quizDate isAtRisk:self.riskAlert]; // This doesn't make sense
+    // Calculate aggregate score
+    
+
+    
+    // Send information to server
 }
 
 #pragma mark - Quiz Answer Buttons
@@ -152,7 +151,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
     }
     else {
         // Record Question Answer Value
@@ -196,7 +195,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
         
     }
     else {
@@ -241,7 +240,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
         
     }
     else {
@@ -286,7 +285,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@               ||               Question 7: %@\nQuestion 2: %@               ||               Question 8: %@\nQuestion 3: %@               ||               Question 9: %@\nQuestion 4: %@               ||               Question 10: %@\nQuestion 5: %@               ||               Question 11: %@\nQuestion 6: %@               ||               Question 12: %@", self.scoreArray[0], self.scoreArray[6], self.scoreArray[1], self.scoreArray[7], self.scoreArray[2], self.scoreArray[8], self.scoreArray[3], self.scoreArray[9], self.scoreArray[4], self.scoreArray[10], self.scoreArray[5], self.scoreArray[11]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
         
     }
     else {
@@ -410,6 +409,31 @@
     // This function combines the score of the individual questions, the overall quiz score and the date the quiz was written into one "cell" in the array
     NSMutableArray *quizResults = [[NSMutableArray alloc] initWithObjects: quizScoreArray, quizScore, quizDate, riskAlert, nil];
     [[UserInformation sharedInstance].scoreArrayArray addObject: quizResults];
+}
+
+- (NSMutableArray *)calculateAggregate:(NSMutableArray *)scoreArrayArray scoreArray:(NSMutableArray *)scoreArray /*aggregateScore:(NSMutableArray *)aggregateScore*/ {
+    NSMutableArray *aggregateScore = [[NSMutableArray alloc] initWithObjects:@0, @0, @0, @0, @0, @0, @0, @0, @0, nil]; // Init weighted array array
+    NSInteger weightSum = 0;
+    int i,j,k;
+//    self.aggregateWeights = [NSArray arrayWithObjects:@"1", @"2", @"4", @"8", @"16", nil];
+    // Calculate aggregate score
+    for (i = 0; i < scoreArrayArray.count; i++) {
+        for (j = 0; j < scoreArray.count; j++) {
+            NSInteger weight = pow(2, i + 1); // Weight will be 2 to the power of index of score array array
+            weightSum += weight;
+            NSInteger score = [[scoreArray objectAtIndex:j] integerValue]; // Get score
+            NSInteger weightedScoreVal = score * weight; // get weighted value of score
+            
+            [aggregateScore setObject:[NSNumber numberWithInteger:([[aggregateScore objectAtIndex:j] integerValue] + weightedScoreVal)] atIndexedSubscript:j];
+        }
+    }
+    // Normalize Score Values
+    for (k = 0; k < scoreArray.count; k++) {
+        float weightedAverage = [[aggregateScore objectAtIndex:k] integerValue]/weightSum;
+        [aggregateScore setObject:[NSNumber numberWithInteger:lroundf(weightedAverage)] atIndexedSubscript:k];
+    }
+    
+    return aggregateScore;
 }
 
 

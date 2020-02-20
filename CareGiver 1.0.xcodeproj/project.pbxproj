@@ -34,6 +34,8 @@
 		22EE346223C5288D0093C4BF /* frownyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EE345F23C5288C0093C4BF /* frownyFace.png */; };
 		22EE346523C542DF0093C4BF /* UserInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE346423C542DF0093C4BF /* UserInformationViewController.m */; };
 		22F82AB323F32DDB00C28399 /* CitationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB223F32DDB00C28399 /* CitationsViewController.m */; };
+		22F82AB623FED5F700C28399 /* SymptomResearchListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB523FED5F700C28399 /* SymptomResearchListTableViewController.m */; };
+		22F82ABA23FED67200C28399 /* FavouriteResearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB923FED67200C28399 /* FavouriteResearchTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		22EE346423C542DF0093C4BF /* UserInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInformationViewController.m; sourceTree = "<group>"; };
 		22F82AB123F32DDB00C28399 /* CitationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CitationsViewController.h; sourceTree = "<group>"; };
 		22F82AB223F32DDB00C28399 /* CitationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitationsViewController.m; sourceTree = "<group>"; };
+		22F82AB423FED5F700C28399 /* SymptomResearchListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SymptomResearchListTableViewController.h; sourceTree = "<group>"; };
+		22F82AB523FED5F700C28399 /* SymptomResearchListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SymptomResearchListTableViewController.m; sourceTree = "<group>"; };
+		22F82AB823FED67200C28399 /* FavouriteResearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavouriteResearchTableViewController.h; sourceTree = "<group>"; };
+		22F82AB923FED67200C28399 /* FavouriteResearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavouriteResearchTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,8 +228,6 @@
 				22722500238F128000A7B254 /* TableViewController.m */,
 				22E605362397308200A3EBDE /* QuizTableViewCell.h */,
 				22E605372397308200A3EBDE /* QuizTableViewCell.m */,
-				22E37F8723D27239009A4B2B /* PHQ9QuizInfo.h */,
-				22E37F8623D27239009A4B2B /* PHQ9QuizInfo.m */,
 				22E605392398009900A3EBDE /* QuizTableCell.xib */,
 			);
 			path = "Table View";
@@ -237,6 +241,8 @@
 				22E7795223CDC283005A009F /* QuizViewController.m */,
 				22E7902323E88799001E133E /* QuizResultsViewController.h */,
 				22E7902423E88799001E133E /* QuizResultsViewController.m */,
+				22E37F8723D27239009A4B2B /* PHQ9QuizInfo.h */,
+				22E37F8623D27239009A4B2B /* PHQ9QuizInfo.m */,
 			);
 			path = "Quiz View";
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				22EE345B23C51B470093C4BF /* ResearchTableViewController.m */,
 				22E3EB0823F032730056CA0A /* ResearchViewController.h */,
 				22E3EB0923F032730056CA0A /* ResearchViewController.m */,
+				22F82AB723FED60C00C28399 /* Special Lists */,
 				22E7906923E9F31F001E133E /* LabSummary.h */,
 				22E7906A23E9F31F001E133E /* LabSummary.m */,
 				22F82AB123F32DDB00C28399 /* CitationsViewController.h */,
@@ -273,6 +280,17 @@
 				22E7794C23CCD65E005A009F /* UserInformation.m */,
 			);
 			path = "User Info Page";
+			sourceTree = "<group>";
+		};
+		22F82AB723FED60C00C28399 /* Special Lists */ = {
+			isa = PBXGroup;
+			children = (
+				22F82AB423FED5F700C28399 /* SymptomResearchListTableViewController.h */,
+				22F82AB523FED5F700C28399 /* SymptomResearchListTableViewController.m */,
+				22F82AB823FED67200C28399 /* FavouriteResearchTableViewController.h */,
+				22F82AB923FED67200C28399 /* FavouriteResearchTableViewController.m */,
+			);
+			path = "Special Lists";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,8 +440,10 @@
 				227224DD238F109E00A7B254 /* main.m in Sources */,
 				22E605382397308200A3EBDE /* QuizTableViewCell.m in Sources */,
 				22E7795323CDC283005A009F /* QuizViewController.m in Sources */,
+				22F82ABA23FED67200C28399 /* FavouriteResearchTableViewController.m in Sources */,
 				227224CC238F109800A7B254 /* AppDelegate.m in Sources */,
 				22EE346523C542DF0093C4BF /* UserInformationViewController.m in Sources */,
+				22F82AB623FED5F700C28399 /* SymptomResearchListTableViewController.m in Sources */,
 				22722501238F128000A7B254 /* TableViewController.m in Sources */,
 				22E37F8823D2723A009A4B2B /* PHQ9QuizInfo.m in Sources */,
 				22E3EB0A23F032730056CA0A /* ResearchViewController.m in Sources */,

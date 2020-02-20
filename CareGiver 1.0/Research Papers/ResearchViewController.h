@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ResearchViewController : UIViewController
 
 @property (strong, nonatomic) LabSummary *labData;
+@property (strong, nonatomic) NSMutableDictionary *labDictionary;
 
 #pragma mark - IBOutlets
 // Text Views
@@ -28,10 +29,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Buttons
 @property (strong, nonatomic) IBOutlet UIButton *citationButton;
+@property (strong, nonatomic) IBOutlet UIButton *favouriteButton;
+@property (strong, nonatomic) IBOutlet UIButton *listButton;
 
 #pragma mark - IBActions
-
+// Buttons
 - (IBAction)citationButtonPressed:(UIButton *)sender;
+- (IBAction)favouriteButtonPressed:(UIButton *)sender;
+- (IBAction)listButtonPressed:(UIButton *)sender;
+
 
 @end
 

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSMutableArray *scoreArray;
 @property (strong, nonatomic) NSNumber *quizScore;
-@property (strong, nonatomic) NSString *quizDate;
+@property (strong, nonatomic) NSDate *quizDate;
 @property (nonatomic) bool riskAlert;
 
 #pragma mark - IB Outlets

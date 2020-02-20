@@ -13,8 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ResearchTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableDictionary *labDictionary;
 @property (strong, nonatomic) NSMutableArray *labArray;
 //@property (strong, nonatomic) LabSummary *currentLab;
+
+
+- (NSMutableArray *)doubleBubbleSort:(NSMutableArray *)unsortedDataArray arrayToSort:(NSMutableArray *)arrayToSort;
 
 @end
 

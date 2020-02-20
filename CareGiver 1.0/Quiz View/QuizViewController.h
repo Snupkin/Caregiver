@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface QuizViewController : UIViewController
 
 @property (strong, nonatomic) NSMutableArray *scoreArray;
-@property (strong, nonatomic) NSString *quizDate;
+@property (strong, nonatomic) NSDate *quizDate;
 @property (strong, nonatomic) NSNumber *quizScore;
+@property (strong, nonatomic) NSArray *aggregateWeights;
 
 @property (nonatomic) NSInteger questionCount;
 @property (nonatomic) bool riskAlert;
@@ -49,7 +50,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)questionNextButtonPressed:(UIButton *)sender;
 - (IBAction)startButtonPressed:(UIButton *)sender;
 
+#pragma mark - Functions
 - (void)combineQuizData:(NSMutableArray *)quizScoreArray totalQuizScore:(NSNumber *)quizScore dateOfQuiz:(NSString *)quizDate isAtRisk:(BOOL)riskAlert;
+
+- (NSMutableArray *)calculateAggregate:(NSMutableArray *)scoreArrayArray scoreArray:(NSMutableArray *)scoreArray aggregateScore:(NSMutableArray *)aggregateScore;
+
 
 @end
 

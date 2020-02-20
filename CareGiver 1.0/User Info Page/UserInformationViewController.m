@@ -8,6 +8,7 @@
 
 #import "UserInformationViewController.h"
 #import "UserInformation.h"
+#include <stdlib.h>
 
 @interface UserInformationViewController ()
 
@@ -22,7 +23,7 @@
 #pragma mark - viewDidLoad Hides
     // Hide Labels on Load if not previously filled
     // Unfilled condition
-    if ([UserInformation sharedInstance].userAge == 0 && [[UserInformation sharedInstance].userDateOfBirth isEqualToString:@"Unspecified"] && [UserInformation sharedInstance].userHeight == [NSNumber numberWithFloat:0.0] && [UserInformation sharedInstance].userWeight == [NSNumber numberWithFloat:0.0] && [[UserInformation sharedInstance].userSex isEqualToString:@"Unspecified"] && [[UserInformation sharedInstance].userGender isEqualToString:@"Unspecified"]) {
+    if ([UserInformation sharedInstance].userAge == [NSNumber numberWithInt:0] && [[UserInformation sharedInstance].userDateOfBirth isEqualToString:@"Unspecified"] && [UserInformation sharedInstance].userHeight == [NSNumber numberWithFloat:0.0] && [UserInformation sharedInstance].userWeight == [NSNumber numberWithFloat:0.0] && [[UserInformation sharedInstance].userSex isEqualToString:@"Unspecified"] && [[UserInformation sharedInstance].userGender isEqualToString:@"Unspecified"]) {
         // Hide Labels on Load
         self.nameLabel.hidden = true;
         self.ageLabel.hidden = true;
@@ -44,6 +45,7 @@
         // Hide Edit Button
         self.editInfoButton.hidden = true;
         self.cancelEditButton.hidden = true;
+        
     }
     // Filled condition
     else {
@@ -140,7 +142,10 @@
 //    [UserInformation sharedInstance].userFirstName = self.firstNameTextField.text;
 //    [UserInformation sharedInstance].userLastName = self.lastNameTextField.text;
     
-//    [UserInformation sharedInstance].userID = 1;
+    if ([UserInformation sharedInstance].userID < 1) {
+        // Create User Id
+        [UserInformation sharedInstance].userID = arc4random_uniform(999999999);
+    }
     [UserInformation sharedInstance].userAge = [NSNumber numberWithInteger:[self.ageTextField.text integerValue]];
     [UserInformation sharedInstance].userDateOfBirth = self.dateOfBirthTextField.text;
     [UserInformation sharedInstance].userHeight = [NSNumber numberWithFloat:[self.heightTextField.text floatValue]];

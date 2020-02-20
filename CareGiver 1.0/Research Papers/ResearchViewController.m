@@ -8,6 +8,8 @@
 
 #import "ResearchViewController.h"
 #import "CitationsViewController.h"
+#import "UserInformation.h"
+#import "SymptomResearchListTableViewController.h"
 
 @interface ResearchViewController ()
 
@@ -70,6 +72,13 @@
     }
     self.subjectGroupTextView.text = bpSubjectGroups;
     
+    // Favourite Button Text
+    if (self.labData.favourited) {
+        [self.favouriteButton setTitle:@"Unfavourite" forState:UIControlStateNormal];
+    }
+    else {
+        [self.favouriteButton setTitle:@"Favourite" forState:UIControlStateNormal];
+    }
 }
 
 
@@ -84,11 +93,35 @@
             CitationsViewController *citationsVC = segue.destinationViewController;
             citationsVC.citations = self.labData.citations;
         }
+        if ([sender isKindOfClass:[UIButton class]]) {
+            if ([segue.destinationViewController isKindOfClass:[SymptomResearchListTableViewController class]]) {
+                SymptomResearchListTableViewController *SRLTVC = segue.destinationViewController;
+                SRLTVC.labDictionary = self.labDictionary;
+            }
+        }
     }
-    
 }
 
+#pragma mark - Button Functionality
 
 - (IBAction)citationButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)favouriteButtonPressed:(UIButton *)sender {
+    if (!self.labData.favourited) {
+        [[UserInformation sharedInstance].favouriteLabs setObject:self.labData forKey:self.labData.title];
+        self.labData.favourited = YES;
+        // Update lab Dictionary
+        [self.labDictionary setObject:self.labData forKey:self.labData.title];
+    }
+    else {
+        [[UserInformation sharedInstance].favouriteLabs removeObjectForKey:self.labData.title];
+        self.labData.favourited = NO;
+        // Update lab Dictionary
+        [self.labDictionary setObject:self.labData forKey:self.labData.title];
+    }
+}
+
+- (IBAction)listButtonPressed:(UIButton *)sender {
 }
 @end

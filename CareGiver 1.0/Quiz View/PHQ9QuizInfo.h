@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PHQ9QuizInfo : NSObject
 
 @property (strong, nonatomic) NSMutableArray *quizQuestions;
+@property (strong, nonatomic) NSArray *aggregateWeights;
 
 
 //@property (strong, nonatomic) NSString *quizTitle;

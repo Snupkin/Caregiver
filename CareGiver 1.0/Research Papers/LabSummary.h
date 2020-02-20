@@ -23,8 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSMutableArray *limitations;
 @property (strong, nonatomic) NSMutableArray *citations;
 
+@property (nonatomic) BOOL favourited;
+@property (nonatomic) BOOL read;
 
-- (instancetype)initWithTitle:(NSString *)title authors:(NSMutableArray *)authors symptoms:(NSMutableArray *)symptoms keywords:(NSMutableArray *)keywords wellnessTask:(NSString *)wellnessTask summary:(NSString *)summary subjectGroup:(NSMutableArray *)subjectGroup otherFindings:(NSMutableArray *)otherFindings limitations:(NSMutableArray *)limitations citations:(NSMutableArray *)citations;
+
+- (instancetype)initWithTitle:(NSString *)title authors:(NSMutableArray *)authors symptoms:(NSMutableArray *)symptoms keywords:(NSMutableArray *)keywords wellnessTask:(NSString *)wellnessTask summary:(NSString *)summary subjectGroup:(NSMutableArray *)subjectGroup otherFindings:(NSMutableArray *)otherFindings limitations:(NSMutableArray *)limitations citations:(NSMutableArray *)citations favourited:(BOOL)favourited read:(BOOL)read;
 
 @end
 

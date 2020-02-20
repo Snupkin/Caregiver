@@ -10,7 +10,7 @@
 
 @implementation LabSummary
 
-- (instancetype)initWithTitle:(NSString *)title authors:(NSMutableArray *)authors symptoms:(NSMutableArray *)symptoms keywords:(NSMutableArray *)keywords wellnessTask:(NSString *)wellnessTask summary:(NSString *)summary subjectGroup:(NSMutableArray *)subjectGroup otherFindings:(NSMutableArray *)otherFindings limitations:(NSMutableArray *)limitations citations:(NSMutableArray *)citations {
+- (instancetype)initWithTitle:(NSString *)title authors:(NSMutableArray *)authors symptoms:(NSMutableArray *)symptoms keywords:(NSMutableArray *)keywords wellnessTask:(NSString *)wellnessTask summary:(NSString *)summary subjectGroup:(NSMutableArray *)subjectGroup otherFindings:(NSMutableArray *)otherFindings limitations:(NSMutableArray *)limitations citations:(NSMutableArray *)citations favourited:(BOOL)favourited read:(BOOL)read{
     
     self = [super init];
     if (!self) return nil;
@@ -25,6 +25,8 @@
     self.otherFindings = otherFindings;
     self.limitations = limitations;
     self.citations = citations;
+    self.favourited = favourited;
+    self.read = read;
     
     return self;
 }

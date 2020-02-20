@@ -23,6 +23,11 @@
 // Quiz Results
 @synthesize scoreArrayArray;
 @synthesize quizDateTime;
+@synthesize riskAlert;
+@synthesize quizTaken;
+@synthesize aggregateScore;
+@synthesize labData;
+@synthesize favouriteLabs;
 
 // Made a singleton to store all of the user's personal data as well as quiz scores
 + (UserInformation *) sharedInstance {
@@ -30,7 +35,8 @@
     if (myInstance == nil) {
     myInstance = [[[self class] alloc] init];
     // Create global instance
-        myInstance.userID = 000000000000;
+        myInstance.userID = 0;
+        
         myInstance.userFullName = @"Unspecified";
         myInstance.userLastName = @"Unspecified";
         myInstance.userFirstName = @"Unspecified";
@@ -42,9 +48,16 @@
         myInstance.userGender = @"Unspecified";
         
         myInstance.scoreArrayArray = [[NSMutableArray alloc] init];
+        myInstance.aggregateScore = [[NSMutableArray alloc] initWithCapacity:9];
+        
+        myInstance.aggregateScoreArray = [[NSMutableArray alloc] init];
         myInstance.quizDateTime = [[NSMutableArray alloc] init];
-        myInstance.riskAlert = 0;
-        myInstance.quizTaken = 0;
+        
+        myInstance.riskAlert = NO;
+        myInstance.quizTaken = NO;
+        
+        myInstance.labData = [[NSMutableDictionary alloc] init];
+        myInstance.favouriteLabs = [[NSMutableDictionary alloc] init];
         
     }
     return myInstance;

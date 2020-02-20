@@ -60,6 +60,15 @@
                                     <segue destination="fyh-eE-J8f" kind="show" id="1LF-hC-tDh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-1E-Sdp">
+                                <rect key="frame" x="295" y="760" width="99" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Favourites"/>
+                                <connections>
+                                    <action selector="favouritesButtonPressed:" destination="tGS-LX-kGo" eventType="touchUpInside" id="nZV-BO-FNf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="N3K-Lz-d7p"/>
@@ -67,6 +76,7 @@
                     <navigationItem key="navigationItem" title="Home" id="PER-Og-71d"/>
                     <connections>
                         <outlet property="backgroundImage" destination="KTz-xD-PdD" id="xZ7-ma-RjO"/>
+                        <outlet property="favouritesButton" destination="J2e-1E-Sdp" id="v9c-Ig-E1p"/>
                         <outlet property="quizAnalyticsButton" destination="7db-4C-7ba" id="Yz0-6X-uEd"/>
                         <outlet property="quizButton" destination="A79-iz-q3F" id="InF-mx-rLI"/>
                         <outlet property="userInfoButton" destination="WSi-4U-fVL" id="B1f-LS-J8B"/>
@@ -454,15 +464,15 @@
                                     <segue destination="fyh-eE-J8f" kind="show" id="KPk-HF-r8u"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Risk Alert Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brc-su-LW9">
-                                <rect key="frame" x="20" y="102" width="374" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Risk Alert Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brc-su-LW9">
+                                <rect key="frame" x="20" y="102" width="374" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Self Help Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03k-3v-32L">
-                                <rect key="frame" x="20" y="169" width="374" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Self Help Information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03k-3v-32L">
+                                <rect key="frame" x="20" y="186" width="374" height="466"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -478,10 +488,10 @@
                                     <segue destination="tGS-LX-kGo" kind="show" id="jOB-D2-WJi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialized Risk Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-0q-1r3">
-                                <rect key="frame" x="20" y="327" width="374" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialized Risk Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-0q-1r3">
+                                <rect key="frame" x="20" y="660" width="374" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -644,6 +654,23 @@
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48Y-eo-0bm">
+                                <rect key="frame" x="20" y="832" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favourite"/>
+                                <connections>
+                                    <action selector="favouriteButtonPressed:" destination="o9p-rj-rp1" eventType="touchUpInside" id="LER-jn-O0W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f7-G2-cxy">
+                                <rect key="frame" x="192" y="832" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="List"/>
+                                <connections>
+                                    <action selector="listButtonPressed:" destination="o9p-rj-rp1" eventType="touchUpInside" id="RE1-Yz-dsd"/>
+                                    <segue destination="9ht-eG-Z2P" kind="show" id="KNO-Nt-xYo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jrQ-Yi-eRc"/>
@@ -651,8 +678,10 @@
                     <connections>
                         <outlet property="authorsTextView" destination="4CP-5q-rok" id="V4v-km-2Af"/>
                         <outlet property="citationButton" destination="gZU-gh-67c" id="uL3-pn-vMk"/>
+                        <outlet property="favouriteButton" destination="48Y-eo-0bm" id="IrO-D4-YQW"/>
                         <outlet property="keywordsTextView" destination="XW5-DF-5Ti" id="1WH-RG-dRb"/>
                         <outlet property="limitationsTextView" destination="qn1-xM-0gK" id="5MO-Q5-IPm"/>
+                        <outlet property="listButton" destination="0f7-G2-cxy" id="Lsu-KB-CxL"/>
                         <outlet property="otherFindingsTextView" destination="0EA-kF-VsC" id="k1n-1S-TLz"/>
                         <outlet property="subjectGroupTextView" destination="WJe-6V-hBo" id="k3F-KZ-YZ6"/>
                         <outlet property="summaryTextView" destination="ovr-lF-7EL" id="rAY-T7-w3O"/>
@@ -663,6 +692,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nk1-3N-HLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4724.6376811594209" y="805.58035714285711"/>
+        </scene>
+        <!--Symptom Research List Table View Controller-->
+        <scene sceneID="wnA-S8-GyU">
+            <objects>
+                <tableViewController id="9ht-eG-Z2P" customClass="SymptomResearchListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EtG-Ar-VKy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SymptomResearchTableCell" textLabel="ZGu-Ug-C4C" detailTextLabel="Feo-Go-PiM" style="IBUITableViewCellStyleSubtitle" id="ifw-9f-l4a">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ifw-9f-l4a" id="eTJ-ha-Mhc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZGu-Ug-C4C">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Feo-Go-PiM">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="o9p-rj-rp1" kind="show" id="afU-3k-woA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9ht-eG-Z2P" id="ljw-BN-Tkm"/>
+                            <outlet property="delegate" destination="9ht-eG-Z2P" id="9MZ-eQ-bDB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Wj-Ui-lZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4725" y="1542"/>
         </scene>
         <!--Citations View Controller-->
         <scene sceneID="RlF-x0-ZiM">
@@ -715,8 +791,8 @@
         <image name="verticalButtonDivider.png" width="623" height="253"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OyX-T1-c6M"/>
-        <segue reference="1LF-hC-tDh"/>
+        <segue reference="afU-3k-woA"/>
+        <segue reference="KPk-HF-r8u"/>
         <segue reference="jOB-D2-WJi"/>
     </inferredMetricsTieBreakers>
 </document>

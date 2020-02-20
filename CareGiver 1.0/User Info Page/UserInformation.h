@@ -25,10 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *userGender;
 
 #pragma mark - Quiz Information Variables
+@property (strong, nonatomic) NSMutableArray *aggregateScore;
+@property (strong, nonatomic) NSMutableArray *aggregateScoreArray;
 @property (strong, nonatomic) NSMutableArray *scoreArrayArray; // Array of previous scoreArrays
 @property (strong, nonatomic) NSMutableArray *quizDateTime; // Date quiz was submitted
 @property (nonatomic) BOOL riskAlert;
 @property (nonatomic) BOOL quizTaken;
+
+@property (strong, nonatomic) NSMutableDictionary *labData;
+@property (strong, nonatomic) NSMutableDictionary *favouriteLabs;
 
 + (UserInformation *) sharedInstance;
 @end
