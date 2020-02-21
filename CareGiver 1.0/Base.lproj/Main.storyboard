@@ -18,10 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KTz-xD-PdD">
-                                <rect key="frame" x="-155" y="0.0" width="725" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A79-iz-q3F">
                                 <rect key="frame" x="281" y="817" width="113" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,10 +39,10 @@
                                     <segue destination="Kq6-W9-eSx" kind="show" id="6vT-aS-c0a"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to CareGiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-lY-1O7">
-                                <rect key="frame" x="71" y="112" width="260" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Caregiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-lY-1O7">
+                                <rect key="frame" x="54" y="108" width="307" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,6 +66,10 @@
                                     <segue destination="2RD-tT-LwN" kind="show" id="R0G-n7-liC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KTz-xD-PdD">
+                                <rect key="frame" x="-155" y="88" width="725" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="N3K-Lz-d7p"/>
@@ -422,6 +422,13 @@
                                     <action selector="button0Pressed:" destination="QrA-7j-LWX" eventType="touchUpInside" id="YSE-w1-LZT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-sa-lFJ">
+                                <rect key="frame" x="20" y="453" width="369" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rq0-a0-XNu"/>
@@ -434,6 +441,7 @@
                         <outlet property="button3" destination="TvR-10-8g3" id="fX8-2W-IMi"/>
                         <outlet property="buttonDividerImage" destination="U2p-je-jB4" id="nQh-IS-Mlr"/>
                         <outlet property="buttonPromptLabel" destination="s78-e5-bAF" id="qbz-zS-2Y3"/>
+                        <outlet property="disclaimerLabel" destination="gfV-sa-lFJ" id="dv5-5K-7YM"/>
                         <outlet property="questionBackButton" destination="xe0-c5-gc3" id="0h2-eo-Y9B"/>
                         <outlet property="questionLabel" destination="51D-Es-Kzz" id="piY-pE-iav"/>
                         <outlet property="questionNextButton" destination="ZkT-sa-8LG" id="lwY-xk-tJj"/>
@@ -844,6 +852,7 @@
         <image name="verticalButtonDivider.png" width="623" height="253"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OyX-T1-c6M"/>
         <segue reference="W92-r0-PDV"/>
         <segue reference="1LF-hC-tDh"/>
         <segue reference="jOB-D2-WJi"/>

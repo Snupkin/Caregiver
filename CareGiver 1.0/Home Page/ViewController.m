@@ -29,7 +29,7 @@
     else {
         self.quizButton.hidden = false;
     }
-    
+//    self.backgroundImage.hidden = true;
     
 }
 

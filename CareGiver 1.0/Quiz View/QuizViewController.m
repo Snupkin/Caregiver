@@ -39,10 +39,12 @@
     self.riskInfoLabel.hidden = true;
     self.buttonDividerImage.hidden = true;
     self.questionNumberLabel.hidden = true;
+    self.disclaimerLabel.hidden = false;
     
     // Set initial label values
     self.buttonPromptLabel.text = @"Press 'Start' to begin the questionaire.";
-    self.questionLabel.text = @"This questionnaire will help assess your mental health and healthcare goals. \n \nPlease answer the following 12 questions as accurately as possible.";
+    self.questionLabel.text = @"This questionnaire will help our system connect you with the most relevant data to help you in achieving your wellness goals. \n \nPlease answer the following 9 questions as accurately as possible.";
+    self.disclaimerLabel.text = @"The medical informatin on this site is provided as an information resource only and is not to be used or relied on for any diagnostic or treatment purposes. This information does not create any patient-physician relationship and should not be used as a substitute for professional diagnosis and treatment. \n\nPlease consult a health care professional before making any health care decisions for guidance about a specific medical condition. \n\nBy starting the quiz you agree with this disclaimer.";
 
     // Initialize question counter & quiz score & riskAlert
     self.questionCount = 0;
@@ -95,6 +97,7 @@
     self.riskInfoLabel.hidden = false;
     self.buttonPromptLabel.hidden = true;
     self.startButton.hidden = true;
+    self.disclaimerLabel.hidden = true;
     
     // Set question number label
     self.questionNumberLabel.text = [NSString stringWithFormat: @"Question %ld:", self.questionCount + 1];
@@ -325,10 +328,12 @@
         
         // Unhide necessary objects
         self.buttonPromptLabel.hidden = false;
+        self.disclaimerLabel.hidden = false;
         
         // Set initial label values
         self.buttonPromptLabel.text = @"Press 'Next' to navigate the questionaire.";
-        self.questionLabel.text = @"This questionnaire will help assess your mental health and healthcare goals. \n \nPlease answer the following 12 questions as accurately as possible.";
+        self.questionLabel.text = @"This questionnaire will help our system connect you with the most relevant data to help you in achieving your wellness goals. \n \nPlease answer the following 9 questions as accurately as possible.";
+        self.disclaimerLabel.text = @"The medical informatin on this site is provided as an information resource only and is not to be used or relied on for any diagnostic or treatment purposes. This information does not create any patient-physician relationship and should not be used as a substitute for professional diagnosis and treatment. \n\nPlease consult a health care professional before making any health care decisions for guidance about a specific medical condition. \n\nBy starting the quiz you agree with this disclaimer.";
     }
     else {
         // Decrement question counter by 1
@@ -380,6 +385,7 @@
         self.riskInfoLabel.hidden = false;
         self.buttonPromptLabel.hidden = true;
         self.startButton.hidden = true;
+        self.disclaimerLabel.hidden = true;
         
         // Set question number label
         self.questionNumberLabel.text = [NSString stringWithFormat: @"Question %ld:", self.questionCount + 1];

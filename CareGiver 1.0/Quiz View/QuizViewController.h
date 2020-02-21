@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *questionNumberLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *buttonDividerImage;
 @property (strong, nonatomic) IBOutlet UILabel *riskInfoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *disclaimerLabel;
 
 // Buttons
 @property (strong, nonatomic) IBOutlet UIButton *button0;

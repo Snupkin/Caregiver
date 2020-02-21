@@ -91,7 +91,7 @@
         self.colorImage.image = [UIImage imageNamed:@"blue.jpg"];
     }
     else if ([self.labData.symptoms[3] integerValue] == 3) {
-        self.colorImage.image = [UIImage imageNamed:@"grey.jpg"];
+        self.colorImage.image = [UIImage imageNamed:@"gray.jpg"];
     }
     else if ([self.labData.symptoms[4] integerValue] == 3) {
         self.colorImage.image = [UIImage imageNamed:@"green.jpg"];
