@@ -35,12 +35,12 @@
         LabSummary *currentLab = [self.labArray objectAtIndex:i];
         BOOL sameSymptom = NO;
         for (j = 0; j < self.previousLab.symptoms.count; j++) {
-            if ([self.previousLab.symptoms[j] integerValue] == 3 && [currentLab.symptoms[j] integerValue] == 3) {
+            if ([self.previousLab.symptoms[j] integerValue] == [currentLab.symptoms[j] integerValue]) {
                 sameSymptom = YES;
             }
         }
         if (sameSymptom == NO) {
-            [self.labArray removeObjectAtIndex:i];
+//            [self.labArray removeObjectAtIndex:i];
         }
     }
 }

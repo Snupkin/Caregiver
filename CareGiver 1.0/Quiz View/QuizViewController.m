@@ -54,7 +54,7 @@
     // Initialize Quiz Scores
     self.quizScore = [NSNumber numberWithInteger:0];
     // Initialize scoreArray with 0's
-    self.scoreArray = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], nil];
+    self.scoreArray = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], [NSNumber numberWithInteger:0], nil];
 }
 
 
@@ -124,7 +124,7 @@
 
 - (IBAction)button0Pressed:(UIButton *)sender {
     // Condition if on last quiz question: Prepare for submit page
-    if (self.questionCount >= 11) {
+    if (self.questionCount >= (self.scoreArray.count - 1)) {
         // Record Question Answer Value
         self.scoreArray[self.questionCount] = [NSNumber numberWithInteger:1];
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
@@ -151,7 +151,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1 (Lack of pleasure): %@ \nQuestion 2 (Depressive mood): %@  \nQuestion 3 (Insomnia/Hypersomnia): %@  \nQuestion 4 (Feeling tired): %@  \nQuestion 5 (Overeating/Undereating): %@  \nQuestion 6 (Feeling down/worthlessness): %@  \nQuestion 7 (Difficulty concentrating): %@  \nQuestion 8 (Can't hold still/Move so slow): %@  \nQuestion 9 (Suicide/Self harm): %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
     }
     else {
         // Record Question Answer Value
@@ -168,7 +168,7 @@
 }
 
 - (IBAction)button1Pressed:(UIButton *)sender {
-    if (self.questionCount >= 11) {
+    if (self.questionCount >= (self.scoreArray.count - 1)) {
         // Record Question Answer Value
         self.scoreArray[self.questionCount] = [NSNumber numberWithInteger:1];
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
@@ -195,7 +195,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1 (Lack of pleasure): %@ \nQuestion 2 (Depressive mood): %@  \nQuestion 3 (Insomnia/Hypersomnia): %@  \nQuestion 4 (Feeling tired): %@  \nQuestion 5 (Overeating/Undereating): %@  \nQuestion 6 (Feeling down/worthlessness): %@  \nQuestion 7 (Difficulty concentrating): %@  \nQuestion 8 (Can't hold still/Move so slow): %@  \nQuestion 9 (Suicide/Self harm): %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
         
     }
     else {
@@ -213,7 +213,7 @@
 }
 
 - (IBAction)button2Pressed:(UIButton *)sender {
-    if (self.questionCount >= 11) {
+    if (self.questionCount >= (self.scoreArray.count - 1)) {
         // Record Question Answer Value
         self.scoreArray[self.questionCount] = [NSNumber numberWithInteger:1];
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
@@ -240,7 +240,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1 (Lack of pleasure): %@ \nQuestion 2 (Depressive mood): %@  \nQuestion 3 (Insomnia/Hypersomnia): %@  \nQuestion 4 (Feeling tired): %@  \nQuestion 5 (Overeating/Undereating): %@  \nQuestion 6 (Feeling down/worthlessness): %@  \nQuestion 7 (Difficulty concentrating): %@  \nQuestion 8 (Can't hold still/Move so slow): %@  \nQuestion 9 (Suicide/Self harm): %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
         
     }
     else {
@@ -258,7 +258,7 @@
 }
 
 - (IBAction)button3Pressed:(UIButton *)sender {
-    if (self.questionCount >= 11) {
+    if (self.questionCount >= (self.scoreArray.count - 1)) {
         // Record Question Answer Value
         self.scoreArray[self.questionCount] = [NSNumber numberWithInteger:3];
         NSLog(@"The score for question %ld is %@", self.questionCount + 1, self.scoreArray[self.questionCount]);
@@ -285,7 +285,7 @@
         self.riskInfoLabel.text = @"Thank you for completing the questionnaire. Please review your answers below. Press 'SUBMIT' to continue.";
         // Show Quiz Result Summary
         self.questionLabel.textAlignment = NSTextAlignmentJustified;
-        self.questionLabel.text = [NSString stringWithFormat:@"Question 1: %@ \nQuestion 2: %@  \nQuestion 3: %@  \nQuestion 4: %@  \nQuestion 5: %@  \nQuestion 6: %@  \nQuestion 7: %@  \nQuestion 8: %@  \nQuestion 9: %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
+        self.questionLabel.text = [NSString stringWithFormat:@"Question 1 (Lack of pleasure): %@ \nQuestion 2 (Depressive mood): %@  \nQuestion 3 (Insomnia/Hypersomnia): %@  \nQuestion 4 (Feeling tired): %@  \nQuestion 5 (Overeating/Undereating): %@  \nQuestion 6 (Feeling down/worthlessness): %@  \nQuestion 7 (Difficulty concentrating): %@  \nQuestion 8 (Can't hold still/Move so slow): %@  \nQuestion 9 (Suicide/Self harm): %@", self.scoreArray[0], self.scoreArray[1], self.scoreArray[2], self.scoreArray[3], self.scoreArray[4], self.scoreArray[5], self.scoreArray[6], self.scoreArray[7], self.scoreArray[8]];
         
     }
     else {
@@ -330,9 +330,6 @@
         self.buttonPromptLabel.text = @"Press 'Next' to navigate the questionaire.";
         self.questionLabel.text = @"This questionnaire will help assess your mental health and healthcare goals. \n \nPlease answer the following 12 questions as accurately as possible.";
     }
-    else if (self.questionCount >= 11){
-        
-    }
     else {
         // Decrement question counter by 1
         self.questionCount--;
@@ -345,7 +342,7 @@
 }
 
 - (IBAction)questionNextButtonPressed:(UIButton *)sender {
-    if (self.questionCount >= 11) {
+    if (self.questionCount >= (self.scoreArray.count - 1)) {
         // Hide Buttons
         self.questionNextButton.hidden = true;
         self.questionBackButton.hidden = false;

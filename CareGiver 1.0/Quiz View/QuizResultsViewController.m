@@ -26,7 +26,7 @@
     // Conditional alert for high self harm risk
     if (self.riskAlert || self.quizScore.integerValue >= 20) {
         self.riskAlertLabel.text = @"We noticed you received a high sore on the PHQ-9. Below are resources that you might want to consider engaging with.";
-        self.infoLabel.text = @"Phone Resources (Available 24/7/365):\nCrisis Services Canada - 1(833)-456-4566 or Text \"Start\" to 45645 (4pm to 12am ET)\nEmergency Services - 911\nKids Help Phone - 1(800)-668-6868 or Text \"Connect\" to 686868 or Access Online Chat at https://kidshelpphone.ca/live-chat/\nTelehealth Ontario (talk with a nurse) - 1(866)-797-0000\n\nHospitals:\n North York General - 4001 Leslie Ave (416)-756-7000\nSunnybrook Emergency - 2075 Bayview Ave (416)-480-6100" ;
+        self.infoLabel.text = @"Phone Resources (Available 24/7/365):\nCrisis Services Canada - 1(833)-456-4566 or Text \"Start\" to 45645 (4pm to 12am ET)\nEmergency Services - 911\nKids Help Phone - 1(800)-668-6868 or Text \"Connect\" to 686868 or Access Online Chat at https://kidshelpphone.ca/live-chat/\nTelehealth Ontario (talk with a nurse) - 1(866)-797-0000\n\nHospitals:\nNorth York General - 4001 Leslie Ave (416)-756-7000\nSunnybrook Emergency - 2075 Bayview Ave (416)-480-6100" ;
         self.highRiskLabel.text = @"If you need Urgent medical or psychiatric attention please visit the closest emergency room";
     }
     else {

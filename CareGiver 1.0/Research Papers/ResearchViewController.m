@@ -143,12 +143,16 @@
         self.labData.favourited = YES;
         // Update lab Dictionary
         [self.labDictionary setObject:self.labData forKey:self.labData.title];
+        // Update Button Text
+        [self.favouriteButton setTitle:@"Unfavourite" forState:UIControlStateNormal];
     }
     else {
         [[UserInformation sharedInstance].favouriteLabs removeObjectForKey:self.labData.title];
         self.labData.favourited = NO;
         // Update lab Dictionary
         [self.labDictionary setObject:self.labData forKey:self.labData.title];
+        [self.favouriteButton setTitle:@"Favourite" forState:UIControlStateNormal];
+
     }
 }
 
