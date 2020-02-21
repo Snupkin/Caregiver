@@ -67,6 +67,7 @@
                                 <state key="normal" title="Favourites"/>
                                 <connections>
                                     <action selector="favouritesButtonPressed:" destination="tGS-LX-kGo" eventType="touchUpInside" id="nZV-BO-FNf"/>
+                                    <segue destination="2RD-tT-LwN" kind="show" id="R0G-n7-liC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -511,6 +512,53 @@
             </objects>
             <point key="canvasLocation" x="3005.7971014492755" y="805.58035714285711"/>
         </scene>
+        <!--Favourite Research Table View Controller-->
+        <scene sceneID="DmI-3H-c9X">
+            <objects>
+                <tableViewController id="2RD-tT-LwN" customClass="FavouriteResearchTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bKq-Yo-2av">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteTableCell" textLabel="gkY-ol-aWH" detailTextLabel="66M-G1-EoV" style="IBUITableViewCellStyleSubtitle" id="pcB-d1-pJX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pcB-d1-pJX" id="RX8-jd-z5g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gkY-ol-aWH">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="66M-G1-EoV">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="o9p-rj-rp1" kind="show" id="W92-r0-PDV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2RD-tT-LwN" id="eT8-jM-U9T"/>
+                            <outlet property="delegate" destination="2RD-tT-LwN" id="mDJ-d9-LSj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3G-mn-K0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="59"/>
+        </scene>
         <!--TableViewController-->
         <scene sceneID="JJh-XV-omv">
             <objects>
@@ -531,7 +579,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jdr-1P-Rx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075" y="59"/>
+            <point key="canvasLocation" x="3006" y="59"/>
         </scene>
         <!--Research Table View Controller-->
         <scene sceneID="UCv-TP-l1x">
@@ -671,6 +719,10 @@
                                     <segue destination="9ht-eG-Z2P" kind="show" id="KNO-Nt-xYo"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brg-yg-7Vl">
+                                <rect key="frame" x="0.0" y="56" width="12" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jrQ-Yi-eRc"/>
@@ -678,6 +730,7 @@
                     <connections>
                         <outlet property="authorsTextView" destination="4CP-5q-rok" id="V4v-km-2Af"/>
                         <outlet property="citationButton" destination="gZU-gh-67c" id="uL3-pn-vMk"/>
+                        <outlet property="colorImage" destination="Brg-yg-7Vl" id="xX2-EL-5d4"/>
                         <outlet property="favouriteButton" destination="48Y-eo-0bm" id="IrO-D4-YQW"/>
                         <outlet property="keywordsTextView" destination="XW5-DF-5Ti" id="1WH-RG-dRb"/>
                         <outlet property="limitationsTextView" destination="qn1-xM-0gK" id="5MO-Q5-IPm"/>
@@ -791,8 +844,9 @@
         <image name="verticalButtonDivider.png" width="623" height="253"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="afU-3k-woA"/>
-        <segue reference="KPk-HF-r8u"/>
+        <segue reference="IlK-nb-L3p"/>
+        <segue reference="W92-r0-PDV"/>
+        <segue reference="1LF-hC-tDh"/>
         <segue reference="jOB-D2-WJi"/>
     </inferredMetricsTieBreakers>
 </document>

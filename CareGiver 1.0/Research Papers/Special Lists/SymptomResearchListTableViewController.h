@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LabSummary.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SymptomResearchListTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableDictionary *labDictionary;
+@property (strong, nonatomic) NSMutableArray *labArray;
+@property (strong, nonatomic) LabSummary *previousLab;
 
 @end
 

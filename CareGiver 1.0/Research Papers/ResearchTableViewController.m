@@ -67,6 +67,7 @@
         }
         
     }
+    
     // Calculate lab compatibility
     int i,j;
     NSMutableArray *compatibilityArray = [[NSMutableArray alloc] init];
@@ -79,7 +80,7 @@
         }
         [compatibilityArray addObject:[NSNumber numberWithInteger:compatibility]];
     }
-    //    self.labArray = [self doubleBubbleSort:compatibilityArray];
+        self.labArray = [self doubleBubbleSort:compatibilityArray arrayToSort:self.labArray];
 }
 
 #pragma mark - Table view data source
@@ -89,7 +90,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.labDictionary.count; // Set number of rows equal to number of papers
+    return self.labArray.count; // Set number of rows equal to number of papers
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -115,8 +116,33 @@
     cell.detailTextLabel.numberOfLines = 2;
     cell.detailTextLabel.text = rowLab.summary;
     // Configure image color
-    cell.imageView.image = [cell.imageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    [cell.imageView setTintColor:[UIColor redColor]];
+    if ([rowLab.symptoms[0] integerValue] == 3) { 
+        cell.backgroundColor = [UIColor colorWithRed:132.0f/255.0f green:92.0f/255.0f blue:54.0f/255.0f alpha:1.0f];
+    }
+    else if ([rowLab.symptoms[1] integerValue] == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:221.0f/255.0f blue:221.0f/255.0f alpha:1.0f];
+    }
+    else if ([rowLab.symptoms[2] integerValue] == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:93.0f/255.0f green:177.0f/255.0f blue:209.0f/255.0f alpha:1.0f];
+    }
+    else if ([rowLab.symptoms[3] integerValue] == 3) {
+        cell.backgroundColor = [UIColor lightGrayColor];
+    }
+    else if ([rowLab.symptoms[4] integerValue] == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:119.0f/255.0f green:221.0f/255.0f blue:119.0f/255.0f alpha:1.0f];
+    }
+    else if ([rowLab.symptoms[5] integerValue] == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:241.0f/255.0f green:196.0f/255.0f blue:112.0f/255.0f alpha:1.0f];
+    }
+    else if ([rowLab.symptoms[6] integerValue] == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:253.0f/255.0f green:253.0f/255.0f blue:152.0f/255.0f alpha:1.0f];
+    }
+    else if ([rowLab.symptoms[7] integerValue] == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:249.0f/255.0f green:102.0f/255.0f blue:94.0f/255.0f alpha:1.0f];
+    }
+    else {
+        cell.backgroundColor = [UIColor colorWithRed:178.0f/255.0f green:157.0f/255.0f blue:217.0f/255.0f alpha:1.0f];
+    }
     
     return cell;
 }

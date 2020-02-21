@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FavouriteResearchTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *labArray;
+@property (strong, nonatomic) NSMutableDictionary *labDictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

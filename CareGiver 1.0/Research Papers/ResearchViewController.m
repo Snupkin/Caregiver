@@ -79,6 +79,35 @@
     else {
         [self.favouriteButton setTitle:@"Favourite" forState:UIControlStateNormal];
     }
+    
+    // Set color marker
+    if ([self.labData.symptoms[0] integerValue] == 3) { 
+        self.colorImage.image = [UIImage imageNamed:@"brown.jpg"];
+    }
+    else if ([self.labData.symptoms[1] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"pink.jpg"];
+    }
+    else if ([self.labData.symptoms[2] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"blue.jpg"];
+    }
+    else if ([self.labData.symptoms[3] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"grey.jpg"];
+    }
+    else if ([self.labData.symptoms[4] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"green.jpg"];
+    }
+    else if ([self.labData.symptoms[5] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"orange.jpg"];
+    }
+    else if ([self.labData.symptoms[6] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"yellow.jpg"];
+    }
+    else if ([self.labData.symptoms[7] integerValue] == 3) {
+        self.colorImage.image = [UIImage imageNamed:@"red.jpg"];
+    }
+    else {
+        self.colorImage.image = [UIImage imageNamed:@"purple.jpg"];
+    }
 }
 
 
@@ -97,6 +126,7 @@
             if ([segue.destinationViewController isKindOfClass:[SymptomResearchListTableViewController class]]) {
                 SymptomResearchListTableViewController *SRLTVC = segue.destinationViewController;
                 SRLTVC.labDictionary = self.labDictionary;
+                SRLTVC.previousLab = self.labData;
             }
         }
     }

@@ -36,6 +36,15 @@
 		22F82AB323F32DDB00C28399 /* CitationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB223F32DDB00C28399 /* CitationsViewController.m */; };
 		22F82AB623FED5F700C28399 /* SymptomResearchListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB523FED5F700C28399 /* SymptomResearchListTableViewController.m */; };
 		22F82ABA23FED67200C28399 /* FavouriteResearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F82AB923FED67200C28399 /* FavouriteResearchTableViewController.m */; };
+		22F82AC623FF543200C28399 /* yellow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82ABD23FF543000C28399 /* yellow.jpg */; };
+		22F82AC723FF543200C28399 /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82ABE23FF543000C28399 /* blue.jpg */; };
+		22F82AC823FF543200C28399 /* gray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82ABF23FF543100C28399 /* gray.jpg */; };
+		22F82AC923FF543200C28399 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82AC023FF543100C28399 /* green.jpg */; };
+		22F82ACC23FF543200C28399 /* orange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82AC323FF543200C28399 /* orange.jpg */; };
+		22F82AD223FF578000C28399 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82ACE23FF577F00C28399 /* red.jpg */; };
+		22F82AD323FF578000C28399 /* purple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82ACF23FF577F00C28399 /* purple.jpg */; };
+		22F82AD423FF578000C28399 /* brown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82AD023FF577F00C28399 /* brown.jpg */; };
+		22F82AD523FF578000C28399 /* pink.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22F82AD123FF578000C28399 /* pink.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +115,15 @@
 		22F82AB523FED5F700C28399 /* SymptomResearchListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SymptomResearchListTableViewController.m; sourceTree = "<group>"; };
 		22F82AB823FED67200C28399 /* FavouriteResearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavouriteResearchTableViewController.h; sourceTree = "<group>"; };
 		22F82AB923FED67200C28399 /* FavouriteResearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavouriteResearchTableViewController.m; sourceTree = "<group>"; };
+		22F82ABD23FF543000C28399 /* yellow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yellow.jpg; sourceTree = "<group>"; };
+		22F82ABE23FF543000C28399 /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue.jpg; sourceTree = "<group>"; };
+		22F82ABF23FF543100C28399 /* gray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gray.jpg; sourceTree = "<group>"; };
+		22F82AC023FF543100C28399 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
+		22F82AC323FF543200C28399 /* orange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orange.jpg; sourceTree = "<group>"; };
+		22F82ACE23FF577F00C28399 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
+		22F82ACF23FF577F00C28399 /* purple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = purple.jpg; sourceTree = "<group>"; };
+		22F82AD023FF577F00C28399 /* brown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brown.jpg; sourceTree = "<group>"; };
+		22F82AD123FF578000C28399 /* pink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pink.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +276,7 @@
 		22EE345623C518660093C4BF /* Research Papers */ = {
 			isa = PBXGroup;
 			children = (
+				22F82ABB23FF4F7700C28399 /* Color Images */,
 				22EE345A23C51B470093C4BF /* ResearchTableViewController.h */,
 				22EE345B23C51B470093C4BF /* ResearchTableViewController.m */,
 				22E3EB0823F032730056CA0A /* ResearchViewController.h */,
@@ -291,6 +310,22 @@
 				22F82AB923FED67200C28399 /* FavouriteResearchTableViewController.m */,
 			);
 			path = "Special Lists";
+			sourceTree = "<group>";
+		};
+		22F82ABB23FF4F7700C28399 /* Color Images */ = {
+			isa = PBXGroup;
+			children = (
+				22F82ABE23FF543000C28399 /* blue.jpg */,
+				22F82ABF23FF543100C28399 /* gray.jpg */,
+				22F82AD023FF577F00C28399 /* brown.jpg */,
+				22F82AD123FF578000C28399 /* pink.jpg */,
+				22F82ACF23FF577F00C28399 /* purple.jpg */,
+				22F82ACE23FF577F00C28399 /* red.jpg */,
+				22F82AC023FF543100C28399 /* green.jpg */,
+				22F82AC323FF543200C28399 /* orange.jpg */,
+				22F82ABD23FF543000C28399 /* yellow.jpg */,
+			);
+			path = "Color Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,13 +432,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				22EE346223C5288D0093C4BF /* frownyFace.png in Resources */,
+				22F82AD323FF578000C28399 /* purple.jpg in Resources */,
+				22F82AD423FF578000C28399 /* brown.jpg in Resources */,
+				22F82AD223FF578000C28399 /* red.jpg in Resources */,
 				227224DA238F109E00A7B254 /* LaunchScreen.storyboard in Resources */,
 				227224D7238F109E00A7B254 /* Assets.xcassets in Resources */,
 				226A81E023AD27360003BBC0 /* Logo.jpg in Resources */,
+				22F82AD523FF578000C28399 /* pink.jpg in Resources */,
+				22F82AC723FF543200C28399 /* blue.jpg in Resources */,
 				22BC5E3B23AADBA300BDADE4 /* buttonDivider.png in Resources */,
+				22F82AC823FF543200C28399 /* gray.jpg in Resources */,
 				227224D2238F109800A7B254 /* Main.storyboard in Resources */,
 				22EE346023C5288D0093C4BF /* smileyFace.png in Resources */,
 				22E6053A2398009900A3EBDE /* QuizTableCell.xib in Resources */,
+				22F82AC623FF543200C28399 /* yellow.jpg in Resources */,
+				22F82AC923FF543200C28399 /* green.jpg in Resources */,
+				22F82ACC23FF543200C28399 /* orange.jpg in Resources */,
 				22EE346123C5288D0093C4BF /* mehFace.png in Resources */,
 				22E86B6923E00F020076DEE1 /* verticalButtonDivider.png in Resources */,
 			);

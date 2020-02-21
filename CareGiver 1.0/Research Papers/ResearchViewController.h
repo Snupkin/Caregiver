@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UITextView *limitationsTextView;
 @property (strong, nonatomic) IBOutlet UITextView *subjectGroupTextView;
 
+// Image
+@property (strong, nonatomic) IBOutlet UIImageView *colorImage;
+
 // Buttons
 @property (strong, nonatomic) IBOutlet UIButton *citationButton;
 @property (strong, nonatomic) IBOutlet UIButton *favouriteButton;
